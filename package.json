@@ -2,8 +2,6 @@
   "name": "sebastiannordbyno",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build index.html",
@@ -13,12 +11,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@parcel/transformer-postcss": "^2.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.2"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.12",
     "parcel": "^2.7.0",
-    "process": "^0.11.10"
+    "postcss": "^8.4.17",
+    "postcss-cli": "^10.0.0",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.1.8"
   }
 }
