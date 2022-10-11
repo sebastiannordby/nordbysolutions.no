@@ -27,24 +27,14 @@ body, #app {
     background-size: cover;
 }
 
-.front-page .overlay {
-    background: rgba(0, 0, 0, 0.65);
-}
-
 .front-page main {
     background: #0a3b3361;
-    border-radius: 0 0 20px 20px;
-}
-
-nav {
-    border-radius: 20px 20px 0px 0px;
-    background: rgb(24 68 58 / 38%);
-    padding: 1rem;
 }
 
 .content{
     margin-inline: auto;
     max-width: 1000px;
+    backdrop-filter: invert(1);
 }
 
 @media(max-width: 375px) {
