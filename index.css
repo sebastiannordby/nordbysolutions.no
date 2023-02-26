@@ -23,7 +23,6 @@ body, #app {
 }
 
 .front-page {
-    background: url('/images/nordlys.jpg') no-repeat;
     background-size: cover;
 }
 
