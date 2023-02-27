@@ -1,6 +1,9 @@
 import {createRoot} from "react-dom/client";
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
+import { ContactPage } from "./pages/contact";
+import { EducationPage } from "./pages/education";
 import { HomePage } from "./pages/home";
+import { WorkPage } from "./pages/work";
 
 const element = document.getElementById('app');
 const root = createRoot(element);
@@ -23,21 +26,20 @@ const Application = () => {
                         {/* <label for="info">Meg</label> */}
                     </div>
                     <div>
-
-                        <Link to={HOME_URL}>
+                        <Link to={EDUCATION_URL}>
                             <span name="education" class="text-4xl material-symbols-outlined">school</span>
                         </Link>
                         {/* <label for="info">Utdanning</label> */}
                     </div> 
                     <div>
-                        <Link to={HOME_URL}>
+                        <Link to={WORK_URL}>
                             <span name="work" class="text-4xl material-symbols-outlined">apartment</span>
                         </Link>
 
                         {/* <label for="info">Erfaring</label> */}
                     </div>
                     <div>
-                        <Link to={HOME_URL}>
+                        <Link to={CONTACT_URL}>
                             <span name="contact" class="text-4xl material-symbols-outlined">contact_mail</span>
                         </Link>
                         {/* <label for="info">Kontakt</label> */}
@@ -50,7 +52,10 @@ const Application = () => {
                     </nav>
                     <main className="flex-1 p-2">
                         <Routes>
-                            <Route path={"/"} element={<HomePage/>}></Route>
+                            <Route path={HOME_URL} element={<HomePage/>}></Route>
+                            <Route path={EDUCATION_URL} element={<EducationPage/>}></Route>
+                            <Route path={WORK_URL} element={<WorkPage/>}></Route>
+                            <Route path={CONTACT_URL} element={<ContactPage/>}></Route>
                         </Routes>
                     </main>
                 </div>
