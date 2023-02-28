@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --light-white: #faf8e5;
+    --light-purple: rgb(183 119 193);
+}
 
 *,
 *:before,
@@ -12,7 +18,8 @@
 
 html {
     height: 100%;
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.25rem;
 }
 body, #app {
     min-height: 100vh;
@@ -45,4 +52,12 @@ body, #app {
     main img {
         width: 13rem !important;
     }
+}
+
+.bg-dall-e {
+    background: linear-gradient(90deg, rgba(211,103,0,1) 0%, rgba(211,115,0,0.941507711038961) 35%, rgb(183 119 193) 100%);
+}
+
+strong {
+    font-size: 1.1em;
 }
