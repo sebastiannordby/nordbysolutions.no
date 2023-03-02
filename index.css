@@ -6,6 +6,7 @@
 :root {
     --light-white: #faf8e5;
     --light-purple: rgb(183 119 193);
+    --light-orange: #d37300f0;
 }
 
 *,
@@ -60,4 +61,9 @@ body, #app {
 
 strong {
     font-size: 1.1em;
+}
+
+.side-nav a:hover {
+    cursor: pointer;
+    color: var(--light-orange);
 }

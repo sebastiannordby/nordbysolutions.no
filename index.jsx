@@ -1,4 +1,5 @@
 import {createRoot} from "react-dom/client";
+import { useState } from "react";
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import { ContactPage } from "./pages/contact";
 import { EducationPage } from "./pages/education";
@@ -19,13 +20,19 @@ const GITHUB_LINK = "https://github.com/sebastiannordby";
 const LINKED_IN_LINK = "https://www.linkedin.com/in/sebastian-nordby-b45087152/";
 
 const Application = () => {
+    const [sideMenuVisible, setSideMenyVisible] = useState(false);
+
+    const sideNavClass = () => {
+        return `side-nav p-4 flex flex-col gap-2 shadow-lg h-full ${ sideMenuVisible ? 'block' : 'hidden'}`;
+    };
+
     return (
         <BrowserRouter>
             <div className="flex w-full">
-                <aside className="p-4 flex flex-col gap-2 shadow-lg h-full">
+                <aside className={sideNavClass()}>
                     <div className="flex flex-col gap-2">
                         <Link to={HOME_URL}>
-                            <span name="info" className="text-4xl material-symbols-outlined">info</span>
+                            <span name="info" className="text-4xl material-symbols-outlined">home</span>
                         </Link>
 
                         {/* <label for="info">Meg</label> */}
@@ -53,7 +60,12 @@ const Application = () => {
                 
                 <div className="flex flex-col w-full">
                     <nav className="p-4 bg-white flex gap-2 justify-between items-center">
-                        <h1 className="text-xl font-bold">SebastianNordby.no</h1>
+                        <div className="flex gap-2 items-center">
+                            <span 
+                                className="text-2xl material-symbols-outlined hidden cursor-pointer sm:block"
+                                onClick={() => setSideMenyVisible(!sideMenuVisible)}>menu</span>
+                            <h1 className="text-xl font-bold">SebastianNordby.no</h1>
+                        </div>
                         
                         <div className="flex gap-2">
                             <a href={GITHUB_LINK} target="_blank">
