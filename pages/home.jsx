@@ -10,28 +10,34 @@ export function HomePage() {
     return (
         <div className={"front-page flex flex-col h-full w-full h-auto p-4 home gap-4"}>
 
-            <section className="p-4 flex gap-4 items-center bg-dall-e flex-wrap mx-auto w-full"
-                style={{
-                    maxWidth: '800px'
-                }}>
-                <div className="mx-auto" style={{
-                    maxWidth: '350px'
-                }}>
-                    <h2 
-                        style={{
-                            color: "var(--light-white)"
-                        }}
-                        className={"text-2xl border-b border-slate-200 pb-2border-b border-slate-200 mb-2 pb-2"}>Hei! Mitt navn er <strong>Sebastian Nordby</strong>.</h2>
-                    <p>
-                        Jeg er en <strong>fullstack utvikler</strong> med 5+ års erfaring. Programmering er min lidenskap og jeg begynte allerede med dette 
-                        da jeg fortsatt tok grunnskole. Videre har jeg fortsatt med lidenskapen og jobber i dag fulltid med programmering.
-                    </p>
-                </div>
-                <img src={DALL_E_2_HACKER_IMG} className="mx-auto w-96 ml-auto" style={{ maxWidth: '300px'}} />
-            </section>
-
+            <IntroductionSection />
+            <SkillShowcase />
             <GithubRepositoriesSection/>
         </div>
+    );
+}
+
+export function IntroductionSection() {
+    return (
+        <section className="p-4 flex gap-4 items-center bg-dall-e flex-wrap mx-auto w-full"
+            style={{
+                maxWidth: '800px'
+            }}>
+            <div className="mx-auto" style={{
+                maxWidth: '350px'
+            }}>
+                <h2 
+                    style={{
+                        color: "var(--light-white)"
+                    }}
+                    className={"text-2xl border-b border-slate-200 pb-2border-b border-slate-200 mb-2 pb-2"}>Hei! Mitt navn er <strong>Sebastian Nordby</strong>.</h2>
+                <p>
+                    Jeg er en <strong>fullstack utvikler</strong> med 5+ års erfaring. Programmering er min lidenskap og jeg begynte allerede med dette 
+                    da jeg fortsatt tok grunnskole. Videre har jeg fortsatt med lidenskapen og jobber i dag fulltid med programmering.
+                </p>
+            </div>
+            <img src={DALL_E_2_HACKER_IMG} className="mx-auto w-96 ml-auto" style={{ maxWidth: '300px'}} />
+        </section>
     );
 }
 
@@ -71,5 +77,43 @@ function GithubRepoShowcase({ githubRepos }) {
                 <span>{x.name}</span>
             </a>
         )
+    );
+}
+
+function SkillShowcase() {
+    return (
+        <section className="p-4 flex flex-col gap-4 bg-orange-400 mx-auto w-full h-80"
+            style={{
+                maxWidth: '800px'
+            }}>
+            <h3 class="text-xl">Ferdigheter</h3>
+
+            <div className="flex flex-wrap gap-2 h-full overflow-y-auto">
+                <div className="p-2">
+                    <h4 className="text-l mb-2">Språk/Markup/Script</h4>
+                    <ul>
+                        <li>C#</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>Typescript</li>
+                        <li>XML/JSON/XSLT</li>
+                    </ul>
+                </div>
+
+                <div className="p-2">
+                    <h4 className="text-l mb-2">Rammeverk/Verktøy</h4>
+                    <ul>
+                        <li>Blazor</li>
+                        <li>React</li>
+                        <li>Angular</li>
+                        <li>.NET</li>
+                        <li>EntityFramework(EF)</li>
+                        <li>Git</li>      
+                        <li>Tailwind</li>      
+                    </ul>
+                </div>
+            </div>
+        </section>
     );
 }
