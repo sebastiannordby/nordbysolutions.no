@@ -4,20 +4,13 @@ import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import { ContactPage } from "./pages/contact";
 import { EducationPage } from "./pages/education";
 import { HomePage } from "./pages/home";
-import { WorkPage } from "./pages/work";
+import { WorkInfoPage, WorkPage } from "./pages/work";
 import githubLogo from './images/github_icon.png';
 import linkedinLogo from './images/linkedin_icon.png';
-
+import { LinkedInCallback } from 'react-linkedin-login-oauth2';
+import {HOME_URL, EDUCATION_URL, WORK_URL, WORK_INFO_URL, CONTACT_URL, GITHUB_LINK, LINKED_IN_LINK} from './pages/constants'; 
 const element = document.getElementById('app');
 const root = createRoot(element);
-
-const HOME_URL = '/';
-const EDUCATION_URL = '/education';
-const WORK_URL = '/work';
-const CONTACT_URL = 'contact';
-
-const GITHUB_LINK = "https://github.com/sebastiannordby";
-const LINKED_IN_LINK = "https://www.linkedin.com/in/sebastian-nordby-b45087152/";
 
 const Application = () => {
     const [sideMenuVisible, setSideMenyVisible] = useState(false);
@@ -78,14 +71,17 @@ const Application = () => {
                     </nav>
                     <main className="flex-1 p-2">
                         <Routes>
+                            <Route exact path="/linkedin" element={<LinkedInCallback/>} />
                             <Route path={HOME_URL} element={<HomePage/>}></Route>
                             <Route path={EDUCATION_URL} element={<EducationPage/>}></Route>
                             <Route path={WORK_URL} element={<WorkPage/>}></Route>
+                            <Route path={WORK_INFO_URL} element={<WorkInfoPage/>}></Route>
                             <Route path={CONTACT_URL} element={<ContactPage/>}></Route>
                         </Routes>
                     </main>
                 </div>
             </div>
+
         </BrowserRouter>
     );
 };
