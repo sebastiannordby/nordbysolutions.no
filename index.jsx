@@ -47,17 +47,16 @@ const Application = () => {
                         <Link to={CONTACT_URL}>
                             <span name="contact" className="text-4xl material-symbols-outlined">contact_mail</span>
                         </Link>
-                        {/* <label for="info">Kontakt</label> */}
                     </div>
                 </aside>
                 
-                <div className="flex flex-col w-full">
-                    <nav className="p-4 bg-white flex gap-2 justify-between items-center">
+                <div className="flex flex-col w-full h-screen overflow-hidden">
+                    <nav className="p-4 flex gap-2 justify-between items-center">
                         <div className="flex gap-2 items-center">
-                            <span 
+                            {/* <span 
                                 className="text-2xl material-symbols-outlined hidden cursor-pointer sm:block"
-                                onClick={() => setSideMenyVisible(!sideMenuVisible)}>menu</span>
-                            <h1 className="text-xl font-bold">SebastianNordby.no</h1>
+                                onClick={() => setSideMenyVisible(!sideMenuVisible)}>menu</span> */}
+                            <h1 className="text-2xl font-bold">Nordby Solutions</h1>
                         </div>
                         
                         <div className="flex gap-2">
@@ -69,7 +68,7 @@ const Application = () => {
                             </a>
                         </div>
                     </nav>
-                    <main className="flex-1 p-2">
+                    <main className="flex-1 p-2 overflow-auto">
                         <Routes>
                             <Route exact path="/linkedin" element={<LinkedInCallback/>} />
                             <Route path={HOME_URL} element={<HomePage/>}></Route>

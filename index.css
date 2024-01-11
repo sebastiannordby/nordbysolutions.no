@@ -56,7 +56,7 @@ body, #app {
 }
 
 .bg-dall-e {
-    background: linear-gradient(90deg, rgba(211,103,0,1) 0%, rgba(211,115,0,0.941507711038961) 35%, rgb(183 119 193) 100%);
+    background: linear-gradient(90deg, rgb(237 234 222) 0%, rgb(215 215 213) 35%, rgb(255 255 255) 100%);
 }
 
 strong {
@@ -66,4 +66,8 @@ strong {
 .side-nav a:hover {
     cursor: pointer;
     color: var(--light-orange);
+}
+
+nav, main {
+    background-color: #EDEADE;
 }
