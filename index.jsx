@@ -34,8 +34,8 @@ const Application = () => {
                         
                         <div className="flex gap-2 items-center">
                             <Link to={PRIVACY_URL}>Privacy</Link>
-                            <Link to={GITHUB_LINK}>Github</Link>
-                            <Link to={LINKED_IN_LINK}>LinkedIn</Link>
+                            <a href="{GITHUB_LINK}" target="_blank">Github</a>
+                            <a href="{LINKED_IN_LINK}" target="_blank">LinkedIn</a>
                         </div>
                     </nav>
                     <main className="flex-1 p-2 overflow-auto">
