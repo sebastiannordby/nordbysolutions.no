@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "parcel index.html --https",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html && copyfiles staticwebapp.config.json dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
+    "copyfiles": "^2.4.1",
     "parcel": "^2.7.0",
     "postcss": "^8.4.17",
     "postcss-cli": "^10.0.0",
