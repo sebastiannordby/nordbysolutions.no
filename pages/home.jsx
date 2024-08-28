@@ -27,9 +27,11 @@ export function IntroductionSection() {
                 maxWidth: '350px'
             }}>
                 <h2
-                    className={"text-2xl border-b border-slate-200 pb-2border-b mb-2 pb-2"}>Velkommen til <strong>Nordby Solutions</strong>.</h2>
+                    className={"text-2xl border-b border-slate-200 pb-2border-b mb-2 pb-2"}>
+                    Welcome to <strong>Nordby Solutions</strong>.
+                </h2>
                 <p>
-                    Nordby Solutions er dedikert til å utvikle brukervennlige og effektive løsninger. Vi skaper applikasjoner som virkelig møter brukernes <strong>behov</strong> og gjør en <strong>forskjell</strong>. Vårt team av dyktige utviklere jobber kontinuerlig med å levere innovative og pålitelige produkter som hjelper våre kunder å nå sine mål.
+                    Nordby Solutions is dedicated to developing user-friendly and efficient solutions. We create applications that truly meet users' <strong>needs</strong> and make a <strong>difference</strong>. Our team of skilled developers continually works on delivering innovative and reliable products that help our customers achieve their goals.
                 </p>
             </div>
             <img src={DALL_E_2_HACKER_IMG} className="mx-auto w-96 ml-auto" style={{ maxWidth: '300px'}} />
@@ -54,12 +56,12 @@ export function GithubRepositoriesSection() {
             style={{
                 maxWidth: '800px'
             }}>
-            <h3 class="text-xl">Github - prosjekter</h3>
+            <h3 class="text-xl">GitHub - Projects</h3>
 
             <div className="flex flex-wrap gap-2 h-full overflow-y-auto">
                 {(
                     loading ? 
-                    <span>Laster..</span> :  <GithubRepoShowcase githubRepos={githubRepos} />
+                    <span>Loading..</span> :  <GithubRepoShowcase githubRepos={githubRepos} />
                 )}
             </div>
         </section>
@@ -86,11 +88,11 @@ function SkillShowcase() {
             <img src={DALL_E_3_SKILLS_IMG} className="h-full hidden md:block max-h-80"/>
 
             <div className="p-4 flex flex-col gap-4 flex-1">
-                <h3 class="text-xl">Ferdigheter</h3>
+                <h3 class="text-xl">Skills</h3>
 
                 <div className="flex flex-wrap gap-2 h-full overflow-y-auto justify-evenly text-center">
                     <div className="p-2">
-                        <h4 className="text-l mb-2 underline">Språk/Markup/Script</h4>
+                        <h4 className="text-l mb-2 underline">Languages/Markup/Script</h4>
                         <ul>
                             <li>C#</li>
                             <li>HTML</li>
@@ -102,7 +104,7 @@ function SkillShowcase() {
                     </div>
 
                     <div className="p-2">
-                        <h4 className="text-l mb-2 underline">Rammeverk/Verktøy</h4>
+                        <h4 className="text-l mb-2 underline">Frameworks/Tools</h4>
                         <ul>
                             <li>Blazor</li>
                             <li>React</li>
