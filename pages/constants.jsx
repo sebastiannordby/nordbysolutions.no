@@ -5,6 +5,7 @@ export const EDUCATION_URL = '/education';
 export const WORK_URL = '/work';
 export const WORK_INFO_URL = '/work/info';
 export const CONTACT_URL = 'contact';
+export const PRIVACY_URL = '/privacy';
 
 export const GITHUB_LINK = "https://github.com/sebastiannordby";
 export const LINKED_IN_LINK = "https://www.linkedin.com/in/sebastian-nordby-b45087152/";

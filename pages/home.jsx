@@ -27,10 +27,9 @@ export function IntroductionSection() {
                 maxWidth: '350px'
             }}>
                 <h2
-                    className={"text-2xl border-b border-slate-200 pb-2border-b mb-2 pb-2"}>Hei! Mitt navn er <strong>Sebastian Nordby</strong>.</h2>
+                    className={"text-2xl border-b border-slate-200 pb-2border-b mb-2 pb-2"}>Velkommen til <strong>Nordby Solutions</strong>.</h2>
                 <p>
-                    Jeg er en <strong>fullstack utvikler</strong> med 5+ års erfaring. Programmering er min lidenskap og jeg begynte allerede med dette 
-                    da jeg fortsatt tok grunnskole. Videre har jeg fortsatt med lidenskapen og jobber i dag fulltid med programmering.
+                    Nordby Solutions er dedikert til å utvikle brukervennlige og effektive løsninger. Vi skaper applikasjoner som virkelig møter brukernes <strong>behov</strong> og gjør en <strong>forskjell</strong>. Vårt team av dyktige utviklere jobber kontinuerlig med å levere innovative og pålitelige produkter som hjelper våre kunder å nå sine mål.
                 </p>
             </div>
             <img src={DALL_E_2_HACKER_IMG} className="mx-auto w-96 ml-auto" style={{ maxWidth: '300px'}} />
