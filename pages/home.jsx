@@ -80,12 +80,10 @@ function GithubRepoShowcase({ githubRepos }) {
 
 function SkillShowcase() {
     return (
-        <section className="flex flex-wrap mx-auto w-full rounded-lg bg-white overflow-hidden shadow-md"
+        <section className="flex flex-wrap mx-auto w-full rounded-lg bg-white overflow-hidden shadow-md bg-dall-e"
             style={{
                 maxWidth: '800px'
             }}>
-
-            <img src={DALL_E_3_SKILLS_IMG} className="h-full hidden md:block max-h-80"/>
 
             <div className="p-4 flex flex-col gap-4 flex-1">
                 <h3 class="text-xl">Skills</h3>
