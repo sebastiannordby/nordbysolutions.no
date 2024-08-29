@@ -65,9 +65,7 @@ export function PrivacyPage() {
                 If you have any questions about this privacy policy or our data handling practices, please contact us at:
             </p>
             <ul className="list-none mb-8">
-                <li><strong>Email:</strong> sebastianbjornstad@hotmail.com</li>
-                <li><strong>Phone:</strong> +47 47964635</li>
-                <li><strong>Address:</strong> Nylennaveien 22, 1920 Sørumsand</li>
+                <li><strong>Email:</strong> support@nordbysolutions.no</li>
             </ul>
         </div>
     );
@@ -140,7 +138,7 @@ export function PrivacyPage() {
 //                 Hvis du har spørsmål om denne personvernerklæringen eller våre datahåndteringspraksiser, vennligst kontakt oss på:
 //             </p>
 //             <ul className="list-none mb-8">
-//                 <li><strong>Email:</strong> sebastianbjornstad@hotmail.com</li>
+//                 <li><strong>Email:</strong> support@nordbysolutions.no</li>
 //                 <li><strong>Phone:</strong> +47 47964635</li>
 //                 <li><strong>Address:</strong> Nylennaveien 22, 1920 Sørumsand</li>
 //             </ul>
