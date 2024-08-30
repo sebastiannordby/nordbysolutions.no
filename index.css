@@ -63,11 +63,30 @@ strong {
     font-size: 1.1em;
 }
 
-.side-nav a:hover {
-    cursor: pointer;
-    color: var(--light-orange);
+/* styles.css */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav, main {
-    background-color: #EDEADE;
+body.dark {
+    background-color: #1a202c;
+    color: #cbd5e0;
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4f46e5;
+}
+
+footer {
+    border-top: 1px solid #e2e8f0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }

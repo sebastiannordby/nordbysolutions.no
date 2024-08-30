@@ -1,59 +1,62 @@
-import {createRoot} from "react-dom/client";
-import { useState } from "react";
-import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { ContactPage } from "./pages/contact";
 import { EducationPage } from "./pages/education";
 import { HomePage } from "./pages/home";
 import { WorkInfoPage, WorkPage } from "./pages/work";
 import { PrivacyPage } from "./pages/privacy";
 import { LinkedInCallback } from 'react-linkedin-login-oauth2';
-import {HOME_URL, EDUCATION_URL, WORK_URL, WORK_INFO_URL, CONTACT_URL, GITHUB_LINK, LINKED_IN_LINK, PRIVACY_URL} from './pages/constants'; 
+import { HOME_URL, EDUCATION_URL, WORK_URL, WORK_INFO_URL, CONTACT_URL, GITHUB_LINK, LINKED_IN_LINK, PRIVACY_URL } from './pages/constants';
+import { useState } from 'react'; // Import useState for toggling dark mode
+import { DarkModeToggle } from './components/dark-mode-toggle'; // Custom dark mode toggle component
+
 const element = document.getElementById('app');
 const root = createRoot(element);
 
 const Application = () => {
-    const [sideMenuVisible, setSideMenyVisible] = useState(false);
-
-    const sideNavClass = () => {
-        return `side-nav p-4 flex flex-col gap-2 shadow-lg h-full ${ sideMenuVisible ? 'block' : 'hidden'}`;
-    };
+    const [darkMode, setDarkMode] = useState(false); // State for dark mode
 
     return (
         <BrowserRouter>
-            <div className="flex flex-col w-full h-screen">                
-                <div className="flex flex-col w-full flex-1  overflow-hidden">
-                    <nav className="p-4 flex gap-2 justify-between items-center">
-                        <div className="flex gap-2 items-center">
-                            {/* <span 
-                                className="text-2xl material-symbols-outlined hidden cursor-pointer sm:block"
-                                onClick={() => setSideMenyVisible(!sideMenuVisible)}>menu</span> */}
+            <div className={`flex flex-col w-full h-screen ${darkMode ? 'dark' : ''}`}>
+                {/* Header */}
+                <header className="bg-white dark:bg-gray-900 shadow-md">
+                    <nav className="p-4 flex gap-4 justify-between items-center max-w-7xl mx-auto">
+                        <div className="flex gap-4 items-center">
                             <Link to={'/'}>
-                                <h1 className="text-2xl font-bold">Nordby Solutions</h1>
+                                <h1 className="text-2xl font-bold text-gray-800 dark:text-white">Nordby Solutions</h1>
                             </Link>
                         </div>
-                        
-                        <div className="flex gap-2 items-center">
-                            <Link to={PRIVACY_URL}>Privacy</Link>
-                            <a href="{GITHUB_LINK}" target="_blank">Github</a>
-                            <a href="{LINKED_IN_LINK}" target="_blank">LinkedIn</a>
+
+                        <div className="flex gap-4 items-center">
+                            <a className="hover:underline text-gray-800 dark:text-gray-300" href={GITHUB_LINK} target="_blank" rel="noopener noreferrer">Github</a>
+                            <a className="hover:underline text-gray-800 dark:text-gray-300" href={LINKED_IN_LINK} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            <Link className="hover:underline text-gray-800 dark:text-gray-300" to={PRIVACY_URL}>Privacy</Link>
+                            <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} /> {/* Dark mode toggle button */}
                         </div>
                     </nav>
-                    <main className="flex-1 p-2 overflow-auto">
-                        <Routes>
-                            <Route exact path="/linkedin" element={<LinkedInCallback/>} />
-                            <Route path={HOME_URL} element={<HomePage/>}></Route>
-                            <Route path={EDUCATION_URL} element={<EducationPage/>}></Route>
-                            <Route path={WORK_URL} element={<WorkPage/>}></Route>
-                            <Route path={WORK_INFO_URL} element={<WorkInfoPage/>}></Route>
-                            <Route path={CONTACT_URL} element={<ContactPage/>}></Route>
-                            <Route path={PRIVACY_URL} element={<PrivacyPage/>}></Route>
-                        </Routes>
-                    </main>
-                </div>
-                <footer className="p-2 text-center">© NordbySolutions - 2024</footer>
+                </header>
+
+                {/* Main content */}
+                <main className="flex-1 p-4 overflow-auto bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+                    <Routes>
+                        <Route exact path="/linkedin" element={<LinkedInCallback />} />
+                        <Route path={HOME_URL} element={<HomePage />} />
+                        <Route path={EDUCATION_URL} element={<EducationPage />} />
+                        <Route path={WORK_URL} element={<WorkPage />} />
+                        <Route path={WORK_INFO_URL} element={<WorkInfoPage />} />
+                        <Route path={CONTACT_URL} element={<ContactPage />} />
+                        <Route path={PRIVACY_URL} element={<PrivacyPage />} />
+                    </Routes>
+                </main>
+
+                {/* Footer */}
+                <footer className="p-4 text-center bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300 shadow-inner">
+                    © Nordby Solutions - 2024
+                </footer>
             </div>
         </BrowserRouter>
     );
 };
 
-root.render(<Application/>);
+root.render(<Application />);
