@@ -15,24 +15,35 @@ const root = createRoot(element);
 
 const Application = () => {
     const [darkMode, setDarkMode] = useState(false); // State for dark mode
+    const [menuOpen, setMenuOpen] = useState(false); // State for responsive menu
 
     return (
         <BrowserRouter>
             <div className={`flex flex-col w-full h-screen ${darkMode ? 'dark' : ''}`}>
                 {/* Header */}
                 <header className="bg-white dark:bg-gray-900 shadow-md">
-                    <nav className="p-4 flex gap-4 justify-between items-center max-w-7xl mx-auto">
-                        <div className="flex gap-4 items-center">
+                    <nav className="p-4 flex flex-wrap justify-between items-center max-w-7xl mx-auto">
+                        <div className="flex items-center justify-between w-full md:w-auto">
                             <Link to={'/'}>
                                 <h1 className="text-2xl font-bold text-gray-800 dark:text-white">Nordby Solutions</h1>
                             </Link>
+                            <button
+                                className="md:hidden text-gray-800 dark:text-white"
+                                onClick={() => setMenuOpen(!menuOpen)}
+                                aria-label="Toggle menu">
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                                </svg>
+                            </button>
                         </div>
 
-                        <div className="flex gap-4 items-center">
-                            <a className="hover:underline text-gray-800 dark:text-gray-300" href={GITHUB_LINK} target="_blank" rel="noopener noreferrer">Github</a>
-                            <a className="hover:underline text-gray-800 dark:text-gray-300" href={LINKED_IN_LINK} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                            <Link className="hover:underline text-gray-800 dark:text-gray-300" to={PRIVACY_URL}>Privacy</Link>
-                            <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} /> {/* Dark mode toggle button */}
+                        <div className={`w-full md:flex md:items-center md:w-auto ${menuOpen ? 'block' : 'hidden'}`}>
+                            <div className="flex flex-col md:flex-row gap-4 items-center mt-4 md:mt-0">
+                                <a className="hover:underline text-gray-800 dark:text-gray-300" href={GITHUB_LINK} target="_blank" rel="noopener noreferrer">Github</a>
+                                <a className="hover:underline text-gray-800 dark:text-gray-300" href={LINKED_IN_LINK} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                                <Link className="hover:underline text-gray-800 dark:text-gray-300" to={PRIVACY_URL}>Privacy</Link>
+                                <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} /> {/* Dark mode toggle button */}
+                            </div>
                         </div>
                     </nav>
                 </header>

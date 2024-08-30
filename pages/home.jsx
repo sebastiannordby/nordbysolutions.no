@@ -28,7 +28,7 @@ export function IntroductionSection() {
                     Nordby Solutions is committed to crafting <strong>user-friendly</strong> and <strong>efficient</strong> solutions. I focus on developing applications that genuinely meet users' needs and make a meaningful impact. As a solo developer, I am dedicated to delivering innovative and reliable products that help my clients achieve their goals. My work is characterized by a personal touch and a deep commitment to <strong>quality</strong> and <strong>user satisfaction</strong>.
                 </p>
             </div>
-            <img src={DALL_E_2_HACKER_IMG} alt="Tech illustration" className="w-80 h-auto rounded-md shadow-md" />
+            <img src={DALL_E_2_HACKER_IMG} alt="Tech illustration" className="w-full md:w-80 h-auto rounded-md shadow-md" />
         </section>
     );
 }
@@ -46,10 +46,10 @@ export function GithubRepositoriesSection() {
     }, []);
 
     return (
-        <section className="p-6 flex flex-col gap-4 bg-white rounded-lg shadow-md mx-auto max-w-3xl">
-            <h3 className="text-2xl font-bold text-gray-900">GitHub - Projects</h3>
+        <section className="p-6 bg-white rounded-lg shadow-md mx-auto max-w-3xl">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">GitHub - Projects</h3>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2">
                 {loading ? (
                     <span className="text-gray-500">Loading...</span>
                 ) : (
@@ -66,7 +66,7 @@ function GithubRepoShowcase({ githubRepos }) {
             {githubRepos.map(repo => (
                 <a
                     key={repo.id}
-                    className="block p-4 bg-gray-100 rounded-lg shadow-md hover:bg-gray-200 transition-colors"
+                    className="block p-4 flex-grow sm:flex-grow-0 bg-gray-100 rounded-lg shadow-md hover:bg-gray-200 transition-colors"
                     href={repo.html_url}
                     target="_blank"
                     rel="noopener noreferrer"
