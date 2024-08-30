@@ -91,8 +91,8 @@ function SkillShowcase() {
                             <li><strong>C#</strong> - Experienced in backend development with .NET framework.</li>
                             <li><strong>HTML</strong> - Expertise in structuring and organizing web content.</li>
                             <li><strong>CSS</strong> - Proficient in styling and responsive design techniques.</li>
-                            <li><strong>JavaScript</strong> - Skilled in creating interactive web applications.</li>
-                            <li><strong>TypeScript</strong> - Experience in building scalable applications with type safety.</li>
+                            <li><strong>JavaScript/Typescript</strong> - Skilled in creating interactive web applications.</li>
+                            <li><strong>SQL/TSQL</strong> - Proficient in querying and managing relational databases.</li>
                             <li><strong>XML/JSON/XSLT</strong> - Handling and transforming data formats efficiently.</li>
                         </ul>
                     </div>
