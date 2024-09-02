@@ -17,7 +17,7 @@ const apps = [
 export function AppPortfolioPage() {
     return (
         <div className="flex flex-col w-full h-auto p-4 gap-4">
-            <h1 className="text-3xl font-bold text-center mb-6">Applications developed by Nordby Solutions</h1>
+            <h1 className="dark:text-white text-3xl font-bold text-center mb-6 whitespace-pre-wrap break-words">Applications developed by Nordby Solutions</h1>
             <div className="flex flex-col gap-6 items-center mx-auto max-w-3xl">
                 {apps.map(app => (
                     <div
