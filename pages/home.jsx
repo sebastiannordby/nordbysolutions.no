@@ -1,18 +1,10 @@
-import { useEffect, useState } from 'react';
 import DALL_E_2_HACKER_IMG from '../images/painting_hacker_dall_e_2.png';
-import DALL_E_3_SKILLS_IMG from '../images/skills.jpg';
-
-const fetchGithubRepositories = async () => {
-    const result = await fetch('https://api.github.com/users/sebastiannordby/repos');
-    return await result.json();
-}
 
 export function HomePage() {
     return (
         <div className="flex flex-col w-full h-auto p-4 gap-4">
             <IntroductionSection />
             <SkillShowcase />
-            {/* <GithubRepositoriesSection /> */}
         </div>
     );
 }

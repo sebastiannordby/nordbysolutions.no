@@ -6,9 +6,10 @@ import { HomePage } from "./pages/home";
 import { WorkInfoPage, WorkPage } from "./pages/work";
 import { PrivacyPage } from "./pages/privacy";
 import { LinkedInCallback } from 'react-linkedin-login-oauth2';
-import { HOME_URL, EDUCATION_URL, WORK_URL, WORK_INFO_URL, CONTACT_URL, GITHUB_LINK, LINKED_IN_LINK, PRIVACY_URL } from './pages/constants';
+import { HOME_URL, EDUCATION_URL, WORK_URL, WORK_INFO_URL, CONTACT_URL, GITHUB_LINK, LINKED_IN_LINK, PRIVACY_URL, APP_PORTFOLIO_URL } from './pages/constants';
 import { useState } from 'react'; // Import useState for toggling dark mode
 import { DarkModeToggle } from './components/dark-mode-toggle'; // Custom dark mode toggle component
+import {AppPortfolioPage} from './pages/applications'
 
 const element = document.getElementById('app');
 const root = createRoot(element);
@@ -39,9 +40,10 @@ const Application = () => {
 
                         <div className={`w-full md:flex md:items-center md:w-auto ${menuOpen ? 'block' : 'hidden'}`}>
                             <div className="flex flex-col md:flex-row gap-4 items-center mt-4 md:mt-0">
+                                <Link className="hover:underline text-gray-800 dark:text-gray-300" to={APP_PORTFOLIO_URL}>Applications</Link>
+                                <Link className="hover:underline text-gray-800 dark:text-gray-300" to={PRIVACY_URL}>Privacy</Link>
                                 <a className="hover:underline text-gray-800 dark:text-gray-300" href={GITHUB_LINK} target="_blank" rel="noopener noreferrer">Github</a>
                                 <a className="hover:underline text-gray-800 dark:text-gray-300" href={LINKED_IN_LINK} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                                <Link className="hover:underline text-gray-800 dark:text-gray-300" to={PRIVACY_URL}>Privacy</Link>
                                 <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} /> {/* Dark mode toggle button */}
                             </div>
                         </div>
@@ -58,6 +60,7 @@ const Application = () => {
                         <Route path={WORK_INFO_URL} element={<WorkInfoPage />} />
                         <Route path={CONTACT_URL} element={<ContactPage />} />
                         <Route path={PRIVACY_URL} element={<PrivacyPage />} />
+                        <Route path={APP_PORTFOLIO_URL} element={<AppPortfolioPage/>}></Route>
                     </Routes>
                 </main>
 
