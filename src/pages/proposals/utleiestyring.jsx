@@ -47,6 +47,69 @@ const customerFeedback = [
     }
 ];
 
+const ImageCarousel = ({ images }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        );
+    };
+
+    return (
+        <div className="carousel-container bg-white rounded-lg p-8 shadow-lg mb-12">
+            <h3 className="text-xl font-bold mb-6 text-center">Utforsk Systemet</h3>
+            <div className="relative">
+                <img
+                    src={images[currentIndex].uri}
+                    alt={`Slide ${currentIndex + 1}`}
+                    className="w-full h-auto rounded-lg mb-4"
+                />
+                <p className="text-center text-sm mb-4">{images[currentIndex].description}</p>
+                <button
+                    className="absolute left-0 top-1/2 bg-gray-200 rounded-full p-2 hover:bg-gray-300"
+                    onClick={prevSlide}
+                >
+                    &lt;
+                </button>
+                <button
+                    className="absolute right-0 top-1/2 bg-gray-200 rounded-full p-2 hover:bg-gray-300"
+                    onClick={nextSlide}
+                >
+                    &gt;
+                </button>
+            </div>
+        </div>
+    );
+};
+
+const images = [
+    {
+        uri: "https://utleiestyring.no/Systembilder/Hovedsiden_desktop.png",
+        description: "Oversikt over verktøy og utleie",
+    },
+    {
+        uri: "https://utleiestyring.no/Systembilder/Hovedsiden_touchscreen.png",
+        description: "Effektiv administrasjon",
+    },
+    {
+        uri: "https://utleiestyring.no/Systembilder/tool_visning.png",
+        description: "Enkel vedlikeholdsoversikt",
+    },
+    {
+        uri: "https://utleiestyring.no/Systembilder/admin.png",
+        description: "Overikt for administratorer",
+    },
+    {
+        uri: 'https://utleiestyring.no/Systembilder/lending.png',
+        description: "Oversikt over utlån"
+    }
+];
+
 export default function UtleiestyringPage() {
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -114,18 +177,6 @@ export default function UtleiestyringPage() {
                     ))}
                 </section>
 
-                {/* Detailed Features Section */}
-                <section id="discover" className="mb-12 bg-white rounded-lg p-8 shadow-lg">
-                    <h3 className="text-xl font-bold mb-4">Oppdag hva Utleiestyring kan gjøre for deg</h3>
-                    {detailedFeatures.map((text, index) => (
-                        <p key={index} className="text-sm mb-4">{text}</p>
-                    ))}
-                    <a 
-                        className="inline-block cursor-pointer bg-utleiestyring_primary text-white rounded-full px-8 py-3 text-base font-semibold hover:bg-utleiestyring_accent transition duration-300">
-                        Les mer<span className="hidden md:inline">{' om funksjonene'}</span>
-                    </a>
-                </section>
-
                 {/* Customer Feedback Section */}
                 <section className="bg-white mb-12 rounded-lg p-8 shadow-lg">
                     <h3 className="text-xl font-bold mb-6 text-center">Hva Våre Kunder Sier</h3>
@@ -138,6 +189,20 @@ export default function UtleiestyringPage() {
                         ))}
                     </div>
                 </section>
+
+                {/* Detailed Features Section */}
+                <section id="discover" className="mb-12 bg-white rounded-lg p-8 shadow-lg">
+                    <h3 className="text-xl font-bold mb-4">Oppdag hva Utleiestyring kan gjøre for deg</h3>
+                    {detailedFeatures.map((text, index) => (
+                        <p key={index} className="text-sm mb-4">{text}</p>
+                    ))}
+                    <a 
+                        className="inline-block cursor-pointer bg-utleiestyring_primary text-white rounded-full px-8 py-3 text-base font-semibold hover:bg-utleiestyring_accent transition duration-300">
+                        Les mer<span className="hidden md:inline">{' om funksjonene'}</span>
+                    </a>
+                </section>
+
+                <ImageCarousel images={images} />
 
                 {/* Final CTA Section */}
                 <section id="contact" className="mb-12 bg-white rounded-lg p-8 shadow-lg">
@@ -175,3 +240,5 @@ export default function UtleiestyringPage() {
         </MinimalistLayout>
     );
 }
+
+
