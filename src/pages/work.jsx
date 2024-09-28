@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LINKEDIN_CLIENT_ID, LS_LINKEDIN_TOKEN, WORK_INFO_URL } from './constants';
-import { LinkedIn, useLinkedIn } from 'react-linkedin-login-oauth2';
-// You can use provided image shipped by this package or using your own
-import linkedin from 'react-linkedin-login-oauth2/assets/linkedin.png';
 import { LinkedIn } from 'react-linkedin-login-oauth2';
+import linkedin from 'react-linkedin-login-oauth2/assets/linkedin.png';
 
 export function WorkPage() {
     const [hasSignedIn, setHasSignedIn] = useState(false);

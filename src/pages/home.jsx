@@ -1,4 +1,5 @@
 import DALL_E_2_HACKER_IMG from '../images/painting_hacker_dall_e_2.png';
+import React from 'react'; // Import React
 
 export function HomePage() {
     return (

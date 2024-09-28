@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import your app images
-import STINISSE_IMAGE from '../images/stinisse.jpg';
+import STINISSE_IMAGE from '/src/images/stinisse.jpg';
 
 // Data for your apps
 const apps = [

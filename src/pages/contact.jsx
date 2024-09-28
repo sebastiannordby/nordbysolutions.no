@@ -1,3 +1,5 @@
+import React from 'react'; // Import React
+
 export function ContactPage() {
     return (
         <>

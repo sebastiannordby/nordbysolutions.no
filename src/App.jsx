@@ -1,20 +1,27 @@
-import { createRoot } from "react-dom/client";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { useState } from 'react';
 import { ContactPage } from "./pages/contact";
 import { EducationPage } from "./pages/education";
 import { HomePage } from "./pages/home";
 import { WorkInfoPage, WorkPage } from "./pages/work";
 import { PrivacyPage } from "./pages/privacy";
 import { LinkedInCallback } from 'react-linkedin-login-oauth2';
-import { HOME_URL, EDUCATION_URL, WORK_URL, WORK_INFO_URL, CONTACT_URL, GITHUB_LINK, LINKED_IN_LINK, PRIVACY_URL, APP_PORTFOLIO_URL } from './pages/constants';
-import { useState } from 'react'; // Import useState for toggling dark mode
 import { DarkModeToggle } from './components/dark-mode-toggle'; // Custom dark mode toggle component
 import {AppPortfolioPage} from './pages/applications'
+import { 
+    HOME_URL,
+    EDUCATION_URL, 
+    WORK_URL, 
+    WORK_INFO_URL,
+    CONTACT_URL,
+    GITHUB_LINK, 
+    LINKED_IN_LINK,
+    PRIVACY_URL,
+    APP_PORTFOLIO_URL 
+} from './pages/constants';
+import React from 'react'; // Import React
 
-const element = document.getElementById('app');
-const root = createRoot(element);
-
-const Application = () => {
+const App = () => {
     const [darkMode, setDarkMode] = useState(false); // State for dark mode
     const [menuOpen, setMenuOpen] = useState(false); // State for responsive menu
 
@@ -73,4 +80,4 @@ const Application = () => {
     );
 };
 
-root.render(<Application />);
+export default App;
