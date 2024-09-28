@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MinimalistLayout from '../../components/minimalist-layout';
 import './utleiestyring.css';
 
@@ -32,7 +32,28 @@ const detailedFeatures = [
     "Alt fra administrasjon til reparasjonshistorikk er tilgjengelig med noen få klikk, så du sparer tid og kan fokusere på det som virkelig betyr noe."
 ];
 
+const customerFeedback = [
+    {
+        name: "Anders L.",
+        feedback: "Utleiestyring har revolusjonert måten vi håndterer verktøyutleie på. Systemet er enkelt å bruke og har hjulpet oss å spare både tid og penger.",
+    },
+    {
+        name: "Kari M.",
+        feedback: "Enkel å sette opp og utrolig brukervennlig! Nå har vi full oversikt over alle våre eiendeler og slipper dobbeltarbeid. Anbefales!",
+    },
+    {
+        name: "Jonas P.",
+        feedback: "Et virkelig innovativt system som gjør hverdagen vår mye mer effektiv. Vi har bedre kontroll på verktøyene våre enn noensinne før.",
+    }
+];
+
 export default function UtleiestyringPage() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <MinimalistLayout className="utleiestyring-root overflow-y-auto">
             <style>
@@ -42,29 +63,40 @@ export default function UtleiestyringPage() {
             </style>
 
             {/* Header */}
-            <header className="bg-white px-4 py-3 flex items-center">
-                <h1 className="font-bold text-xl">Utleiestyring</h1>
-                <nav className="ml-auto flex gap-2 items-center">
-                    <a href="/">Hjem</a>
-                    <a href="#discover">Oppdag</a>
-                    <a href="#contact">Kontakt oss</a>
-                    <a href="#login" className="bg-utleiestyring_primary text-white rounded-md cursor-pointer px-2 py-1 hover:bg-utleiestyring_accent hover:text-white hover:underline ml-1">
-                        Logg inn
-                    </a>
+            <header className="bg-white dark:bg-gray-900 shadow-md">
+                <nav className="p-4 flex flex-wrap justify-between items-center max-w-7xl mx-auto">
+                    <div className="flex items-center justify-between w-full md:w-auto">
+                        <h1 className="font-bold text-xl">Utleiestyring</h1>
+                        <button onClick={toggleMenu} className="md:hidden">
+                            <span className="material-icons text-[29px]" >
+                                {menuOpen ? "close" : "menu"}
+                            </span>
+                        </button>
+                    </div>
+
+                    <div className={`w-full md:flex md:items-center md:w-auto ${menuOpen ? 'block' : 'hidden'}`}>
+                        <div className="flex flex-col md:flex-row gap-4 items-center mt-4 md:mt-0">
+                            <a href="/" className="py-2">Hjem</a>
+                            <a href="#discover" className="py-2">Oppdag</a>
+                            <a href="#contact" className="py-2">Kontakt oss</a>
+                            <a href="#login" className="bg-utleiestyring_primary text-white rounded-md cursor-pointer px-2 py-1 hover:bg-utleiestyring_accent hover:text-white hover:underline ml-1">
+                                Logg inn
+                            </a>
+                        </div>
+                    </div>
                 </nav>
             </header>
 
             {/* Hero Section */}
             <main className="p-4">
-                <section className="bg-utleiestyring_light py-12 text-center mb-12 rounded-lg shadow-lg">
+                <section className="bg-utleiestyring_light py-12 text-center mb-12 rounded-lg shadow-lg p-2">
                     <h2 className="text-3xl font-bold mb-4">Velkommen til Fremtiden av Verktøyutleie</h2>
                     <p className="text-base mb-6">
                         <span className="font-semibold">Spar tid. Spar penger.</span> Effektiv verktøyutleie, skreddersydd for din bedrift.
                     </p>
                     <a 
                         href="#demo" 
-                        className="bg-utleiestyring_primary text-white rounded-full px-6 py-3 text-base font-semibold hover:bg-utleiestyring_accent transition duration-300"
-                    >
+                        className="bg-utleiestyring_primary whitespace-pre text-white rounded-full px-6 py-3 text-base font-semibold hover:bg-utleiestyring_accent transition duration-300">
                         Start Gratis Prøveperiode
                     </a>
                 </section>
@@ -89,11 +121,22 @@ export default function UtleiestyringPage() {
                         <p key={index} className="text-sm mb-4">{text}</p>
                     ))}
                     <a 
-                        href="#more-details" 
-                        className="inline-block bg-utleiestyring_primary text-white rounded-full px-8 py-3 text-base font-semibold hover:bg-utleiestyring_accent transition duration-300"
-                    >
-                        Les mer om funksjonene
+                        className="inline-block cursor-pointer bg-utleiestyring_primary text-white rounded-full px-8 py-3 text-base font-semibold hover:bg-utleiestyring_accent transition duration-300">
+                        Les mer<span className="hidden md:inline">{' om funksjonene'}</span>
                     </a>
+                </section>
+
+                {/* Customer Feedback Section */}
+                <section className="bg-white mb-12 rounded-lg p-8 shadow-lg">
+                    <h3 className="text-xl font-bold mb-6 text-center">Hva Våre Kunder Sier</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {customerFeedback.map((feedback, index) => (
+                            <div key={index} className="bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                                <p className="italic mb-4">"{feedback.feedback}"</p>
+                                <p className="font-semibold text-right">- {feedback.name}</p>
+                            </div>
+                        ))}
+                    </div>
                 </section>
 
                 {/* Final CTA Section */}

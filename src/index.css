@@ -77,10 +77,10 @@ body.dark {
 a {
     transition: color 0.3s ease;
 }
-
+/* 
 a:hover {
     color: #4f46e5;
-}
+} */
 
 footer {
     border-top: 1px solid #e2e8f0;
