@@ -20,6 +20,7 @@ import {
     APP_PORTFOLIO_URL 
 } from './pages/constants';
 import React from 'react'; // Import React
+import UtleiestyringPage from './pages/proposals/utleiestyring';
 
 const App = () => {
     const [darkMode, setDarkMode] = useState(false); // State for dark mode
@@ -68,6 +69,7 @@ const App = () => {
                         <Route path={CONTACT_URL} element={<ContactPage />} />
                         <Route path={PRIVACY_URL} element={<PrivacyPage />} />
                         <Route path={APP_PORTFOLIO_URL} element={<AppPortfolioPage/>}></Route>
+                        <Route path="/proposals/utleiestyring" element={<UtleiestyringPage/>}></Route>
                     </Routes>
                 </main>
 
