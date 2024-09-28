@@ -46,8 +46,8 @@ export default function UtleiestyringPage() {
                 <h1 className="font-bold text-xl">Utleiestyring</h1>
                 <nav className="ml-auto flex gap-2 items-center">
                     <a href="/">Hjem</a>
-                    <a href="#contact">Kontakt oss</a>
                     <a href="#discover">Oppdag</a>
+                    <a href="#contact">Kontakt oss</a>
                     <a href="#login" className="bg-utleiestyring_primary text-white rounded-md cursor-pointer px-2 py-1 hover:bg-utleiestyring_accent hover:text-white hover:underline ml-1">
                         Logg inn
                     </a>
