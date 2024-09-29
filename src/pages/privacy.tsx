@@ -1,76 +1,141 @@
 import React from 'react'; // Import React
 
 export function PrivacyPage() {
-    return (
-        <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
-            <h1 className="text-4xl font-bold text-center mb-6 whitespace-pre-wrap break-words">
-                Privacy Policy for NordbySolutions' Applications
-            </h1>
-            <p className="text-sm text-gray-500 text-center mb-8">Last updated: 26.08.2024</p>
+  return (
+    <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
+      <h1 className="text-4xl font-bold text-center mb-6 whitespace-pre-wrap break-words">
+        Privacy Policy for NordbySolutions' Applications
+      </h1>
+      <p className="text-sm text-gray-500 text-center mb-8">
+        Last updated: 26.08.2024
+      </p>
 
-            <p className="mb-6">
-                At NordbySolutions, we are committed to protecting your privacy. This privacy policy explains how we collect, use, share, and protect information about you when you use our applications (hereinafter referred to as the "Applications"). Please note that we may change this privacy policy from time to time, and we will notify you of any significant changes in a manner we deem appropriate (e.g., through the Applications or via email).
-            </p>
+      <p className="mb-6">
+        At NordbySolutions, we are committed to protecting your privacy. This
+        privacy policy explains how we collect, use, share, and protect
+        information about you when you use our applications (hereinafter
+        referred to as the "Applications"). Please note that we may change this
+        privacy policy from time to time, and we will notify you of any
+        significant changes in a manner we deem appropriate (e.g., through the
+        Applications or via email).
+      </p>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4">1. Information We Collect</h2>
-            <p className="mb-4">When you use our Applications, we may collect the following types of information:</p>
-            <ul className="list-disc list-inside mb-6">
-                <li><strong>Personally Identifiable Information (PII):</strong> This includes your name, email address, and phone number.</li>
-                <li><strong>Activity Data from Devices:</strong> This includes data such as heart rate, workout history, and other health information relevant to group sessions.</li>
-                <li><strong>Usage Data:</strong> Information about how you use the Applications, including device information, log files, and other information collected through cookies and similar technologies.</li>
-            </ul>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">
+        1. Information We Collect
+      </h2>
+      <p className="mb-4">
+        When you use our Applications, we may collect the following types of
+        information:
+      </p>
+      <ul className="list-disc list-inside mb-6">
+        <li>
+          <strong>Personally Identifiable Information (PII):</strong> This
+          includes your name, email address, and phone number.
+        </li>
+        <li>
+          <strong>Activity Data from Devices:</strong> This includes data such
+          as heart rate, workout history, and other health information relevant
+          to group sessions.
+        </li>
+        <li>
+          <strong>Usage Data:</strong> Information about how you use the
+          Applications, including device information, log files, and other
+          information collected through cookies and similar technologies.
+        </li>
+      </ul>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4">2. How We Use the Information</h2>
-            <p className="mb-4">We use the information we collect for the following purposes:</p>
-            <ul className="list-disc list-inside mb-6">
-                <li>To provide and improve our services.</li>
-                <li>To personalize your experience within the Applications.</li>
-                <li>To communicate with you, including for customer service purposes.</li>
-                <li>To analyze usage of the Applications and improve functionality.</li>
-                <li>To comply with legal requirements and protect our rights.</li>
-            </ul>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">
+        2. How We Use the Information
+      </h2>
+      <p className="mb-4">
+        We use the information we collect for the following purposes:
+      </p>
+      <ul className="list-disc list-inside mb-6">
+        <li>To provide and improve our services.</li>
+        <li>To personalize your experience within the Applications.</li>
+        <li>
+          To communicate with you, including for customer service purposes.
+        </li>
+        <li>To analyze usage of the Applications and improve functionality.</li>
+        <li>To comply with legal requirements and protect our rights.</li>
+      </ul>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4">3. Sharing of Information</h2>
-            <p className="mb-4">We do not share your personal information with third parties, except in the following circumstances:</p>
-            <ul className="list-disc list-inside mb-6">
-                <li><strong>With Your Consent:</strong> We may share your information with third parties if we have obtained your explicit consent to do so.</li>
-                <li><strong>To Comply with the Law:</strong> We may share your information if required by law, court order, or other legal processes.</li>
-                <li><strong>With Service Providers:</strong> We may share your information with trusted third-party service providers who assist us in delivering our services (e.g., IT service providers).</li>
-            </ul>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">
+        3. Sharing of Information
+      </h2>
+      <p className="mb-4">
+        We do not share your personal information with third parties, except in
+        the following circumstances:
+      </p>
+      <ul className="list-disc list-inside mb-6">
+        <li>
+          <strong>With Your Consent:</strong> We may share your information with
+          third parties if we have obtained your explicit consent to do so.
+        </li>
+        <li>
+          <strong>To Comply with the Law:</strong> We may share your information
+          if required by law, court order, or other legal processes.
+        </li>
+        <li>
+          <strong>With Service Providers:</strong> We may share your information
+          with trusted third-party service providers who assist us in delivering
+          our services (e.g., IT service providers).
+        </li>
+      </ul>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4">4. Data Retention</h2>
-            <p className="mb-6">
-                We retain your personal information for as long as necessary to fulfill the purposes for which it was collected or as required by law.
-            </p>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">4. Data Retention</h2>
+      <p className="mb-6">
+        We retain your personal information for as long as necessary to fulfill
+        the purposes for which it was collected or as required by law.
+      </p>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4">5. Your Rights</h2>
-            <p className="mb-4">You have the right to:</p>
-            <ul className="list-disc list-inside mb-6">
-                <li>Access your personal information that we process.</li>
-                <li>Request correction of any inaccurate or incomplete personal information.</li>
-                <li>Request the deletion of your personal information under certain circumstances.</li>
-                <li>Withdraw your consent where we rely on your consent for processing.</li>
-            </ul>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">5. Your Rights</h2>
+      <p className="mb-4">You have the right to:</p>
+      <ul className="list-disc list-inside mb-6">
+        <li>Access your personal information that we process.</li>
+        <li>
+          Request correction of any inaccurate or incomplete personal
+          information.
+        </li>
+        <li>
+          Request the deletion of your personal information under certain
+          circumstances.
+        </li>
+        <li>
+          Withdraw your consent where we rely on your consent for processing.
+        </li>
+      </ul>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4">6. Security</h2>
-            <p className="mb-6">
-                We take the security of your personal information seriously and have implemented measures to protect it against unauthorized access, loss, misuse, or alteration.
-            </p>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">6. Security</h2>
+      <p className="mb-6">
+        We take the security of your personal information seriously and have
+        implemented measures to protect it against unauthorized access, loss,
+        misuse, or alteration.
+      </p>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4">7. Changes to This Privacy Policy</h2>
-            <p className="mb-6">
-                We may update this privacy policy from time to time. Any updates will be posted on our website, and we will notify you of any significant changes.
-            </p>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">
+        7. Changes to This Privacy Policy
+      </h2>
+      <p className="mb-6">
+        We may update this privacy policy from time to time. Any updates will be
+        posted on our website, and we will notify you of any significant
+        changes.
+      </p>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4">8. Contact Information</h2>
-            <p className="mb-6">
-                If you have any questions about this privacy policy or our data handling practices, please contact us at:
-            </p>
-            <ul className="list-none mb-8">
-                <li><strong>Email:</strong> support@nordbysolutions.no</li>
-            </ul>
-        </div>
-    );
+      <h2 className="text-2xl font-semibold mt-8 mb-4">
+        8. Contact Information
+      </h2>
+      <p className="mb-6">
+        If you have any questions about this privacy policy or our data handling
+        practices, please contact us at:
+      </p>
+      <ul className="list-none mb-8">
+        <li>
+          <strong>Email:</strong> support@nordbysolutions.no
+        </li>
+      </ul>
+    </div>
+  );
 }
 
 // export function PrivacyPage() {

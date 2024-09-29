@@ -4,78 +4,86 @@
 @tailwind utilities;
 
 :root {
-    --light-white: #faf8e5;
-    --light-purple: rgb(183 119 193);
-    --light-orange: #d37300f0;
+  --light-white: #faf8e5;
+  --light-purple: rgb(183 119 193);
+  --light-orange: #d37300f0;
 }
 
 *,
 *:before,
 *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    height: 100%;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 1.25rem;
+  height: 100%;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.25rem;
 }
-body, #app {
-    min-height: 100vh;
+body,
+#app {
+  min-height: 100vh;
 }
 
 #app {
-    display: flex;
+  display: flex;
 }
 
 .front-page {
-    background-size: cover;
+  background-size: cover;
 }
 
 .front-page main {
-    background: #0a3b3361;
+  background: #0a3b3361;
 }
 
-.content{
+.content {
+  margin-inline: auto;
+  max-width: 1000px;
+  backdrop-filter: invert(1);
+}
+
+@media (max-width: 375px) {
+  nav ul,
+  nav h1 {
     margin-inline: auto;
-    max-width: 1000px;
-    backdrop-filter: invert(1);
-}
+  }
 
-@media(max-width: 375px) {
-    nav ul,
-    nav h1{
-        margin-inline: auto;
-    }
-
-    main img {
-        width: 13rem !important;
-    }
+  main img {
+    width: 13rem !important;
+  }
 }
 
 .bg-dall-e {
-    background: linear-gradient(90deg, rgb(237 234 222) 0%, rgb(215 215 213) 35%, rgb(255 255 255) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(237 234 222) 0%,
+    rgb(215 215 213) 35%,
+    rgb(255 255 255) 100%
+  );
 }
 
 strong {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 /* styles.css */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 body.dark {
-    background-color: #1a202c;
-    color: #cbd5e0;
+  background-color: #1a202c;
+  color: #cbd5e0;
 }
 
 a {
-    transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 /* 
 a:hover {
@@ -83,10 +91,14 @@ a:hover {
 } */
 
 footer {
-    border-top: 1px solid #e2e8f0;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  border-top: 1px solid #e2e8f0;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 header {
-    transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }

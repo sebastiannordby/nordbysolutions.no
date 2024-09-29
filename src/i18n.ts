@@ -6,13 +6,13 @@ import no from './locales/no.json';
 i18n.use(initReactI18next).init({
   resources: {
     en: { translation: en },
-    no: { translation: no }
+    no: { translation: no },
   },
   lng: 'en', // default language
   fallbackLng: 'en', // fallback language
   interpolation: {
-    escapeValue: false // React already escapes by default
-  }
+    escapeValue: false, // React already escapes by default
+  },
 });
 
 export default i18n;
