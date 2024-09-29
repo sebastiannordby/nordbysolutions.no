@@ -3,9 +3,9 @@
     "explore": "Utforsk",
     "welcome_to": "Velkommen til",
     "applications": "Applikasjoner",
-    "privacy": "Personvern"
+    "privacy": "Personvern",
+    "contact_me": "Kontakt Meg"
   },
-
   "apps": {
     "stinisse": {
       "name": "Stinisse",

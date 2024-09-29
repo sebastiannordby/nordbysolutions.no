@@ -28,9 +28,15 @@ export function IntroductionSection() {
           <strong>{t('description.quality')}</strong> {t('description.and')}{' '}
           <strong>{t('description.userSatisfaction')}</strong>.
         </p>
+        <a
+          href="mailto:sebastian@nordbysolutions.no?Subject=Ønsker%20Relasjon"
+          className="mt-4 inline-block px-6 py-2 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+        >
+          {t('common.contact_me')}
+        </a>
       </div>
       <img
-        src="/painting_hacker_dall_e_2.png"
+        src="/images/ns_logo.jpg"
         alt="Tech illustration"
         className="w-full md:w-80 h-auto rounded-md shadow-md"
       />
