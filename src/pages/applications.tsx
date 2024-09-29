@@ -26,13 +26,13 @@ export function AppPortfolioPage() {
 
   return (
     <div className="flex flex-col w-full h-auto p-4 gap-4">
-      <h1 className="dark:text-white text-3xl font-bold text-center mb-6 whitespace-pre-wrap break-words">
+      <h1 className="dark:text-white text-3xl font-bold text-center mb-6 mx-auto whitespace-pre-wrap break-words">
         {t('apps.applications_developed_header')}
       </h1>
 
       {/* Completed Applications Section */}
       <section>
-        <h2 className="dark:text-white text-2xl font-semibold mb-4">
+        <h2 className="dark:text-white text-2xl text-center font-semibold mb-4">
           {t('apps.completes_applications_header')}
         </h2>
         <div className="flex flex-col gap-6 items-center mx-auto max-w-3xl">
@@ -65,7 +65,7 @@ export function AppPortfolioPage() {
 
       {/* Consulting/Proposed Applications Section */}
       <section className="mt-12">
-        <h2 className="dark:text-white text-2xl font-semibold mb-4">
+        <h2 className="dark:text-white text-2xl text-center font-semibold mb-4">
           {t('apps.client_proposal_header')}
         </h2>
         <div className="flex flex-col gap-6 items-center mx-auto max-w-3xl">

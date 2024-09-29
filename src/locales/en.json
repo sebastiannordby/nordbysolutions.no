@@ -1,6 +1,9 @@
 {
   "common": {
-    "explore": "Explore"
+    "explore": "Explore",
+    "welcome_to": "Welcome to",
+    "applications": "Applications",
+    "privacy": "Privacy"
   },
   "apps": {
     "stinisse": {
@@ -14,5 +17,36 @@
     "client_proposal_header": "Client Proposals & Consulting",
     "completes_applications_header": "Completed Applications",
     "applications_developed_header": "Applications developed by Nordby Solutions"
+  },
+  "description": {
+    "intro": "Nordby Solutions is committed to crafting",
+    "userFriendly": "user-friendly",
+    "efficient": "efficient",
+    "focus": "I focus on developing applications that genuinely meet users' needs and make a meaningful impact.",
+    "soloDeveloper": "As a solo developer, I am dedicated to delivering innovative and reliable products that help my clients achieve their goals.",
+    "personalTouch": "My work is characterized by a personal touch and a deep commitment to",
+    "quality": "quality",
+    "userSatisfaction": "user satisfaction",
+    "and": "and"
+  },
+  "skills": {
+    "header": "Skills & Expertise",
+    "languagesHeader": "Languages & Technologies",
+    "frameworksHeader": "Frameworks & Tools",
+    "skillsList": {
+      "csharp": "<strong>C#</strong> - Experienced in backend development with .NET framework.",
+      "html": "<strong>HTML</strong> - Expertise in structuring and organizing web content.",
+      "css": "<strong>CSS</strong> - Proficient in styling and responsive design techniques.",
+      "javascript": "<strong>JavaScript/Typescript</strong> - Skilled in creating interactive web applications.",
+      "sql": "<strong>SQL/TSQL</strong> - Proficient in querying and managing relational databases.",
+      "xml": "<strong>XML/JSON/XSLT</strong> - Handling and transforming data formats efficiently.",
+      "blazor": "<strong>Blazor</strong> - Building interactive web UIs with C# instead of JavaScript.",
+      "react": "<strong>React</strong> - Creating dynamic user interfaces with component-based architecture.",
+      "angular": "<strong>Angular</strong> - Developing robust single-page applications.",
+      "dotnet": "<strong>.NET</strong> - Comprehensive framework for building diverse applications.",
+      "ef": "<strong>Entity Framework (EF)</strong> - ORM tool for working with databases in .NET applications.",
+      "git": "<strong>Git</strong> - Version control for managing code and collaboration.",
+      "tailwind": "<strong>Tailwind CSS</strong> - Utility-first CSS framework for rapid UI development."
+    }
   }
 }

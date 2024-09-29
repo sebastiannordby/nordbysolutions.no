@@ -1,7 +1,11 @@
 {
   "common": {
-    "explore": "Utforsk"
+    "explore": "Utforsk",
+    "welcome_to": "Velkommen til",
+    "applications": "Applikasjoner",
+    "privacy": "Personvern"
   },
+
   "apps": {
     "stinisse": {
       "name": "Stinisse",
@@ -14,5 +18,36 @@
     "client_proposal_header": "Kundeproposisjoner & Konsultasjon",
     "completes_applications_header": "Fullførte Applikasjoner",
     "applications_developed_header": "Applikasjoner utviklet av Nordby Solutions"
+  },
+  "description": {
+    "intro": "Nordby Solutions er forpliktet til å lage",
+    "userFriendly": "brukervennlige",
+    "efficient": "effektive",
+    "focus": "Jeg fokuserer på å utvikle applikasjoner som virkelig møter brukernes behov og gjør en meningsfull innvirkning.",
+    "soloDeveloper": "Som en solo-utvikler er jeg dedikert til å levere innovative og pålitelige produkter som hjelper mine kunder med å nå sine mål.",
+    "personalTouch": "Mitt arbeid kjennetegnes av et personlig preg og en dyp forpliktelse til",
+    "quality": "kvalitet",
+    "userSatisfaction": "brukertilfredshet",
+    "and": "og"
+  },
+  "skills": {
+    "header": "Ferdigheter & Ekspertise",
+    "languagesHeader": "Språk & Teknologier",
+    "frameworksHeader": "Rammeverk & Verktøy",
+    "skillsList": {
+      "csharp": "<strong>C#</strong> - Erfaren i backend-utvikling med .NET-rammeverket.",
+      "html": "<strong>HTML</strong> - Ekspertise i strukturering og organisering av nettinnhold.",
+      "css": "<strong>CSS</strong> - Dyktig i styling og responsive designteknikker.",
+      "javascript": "<strong>JavaScript/Typescript</strong> - Dyktig i å lage interaktive webapplikasjoner.",
+      "sql": "<strong>SQL/TSQL</strong> - Dyktig i spørring og håndtering av relasjonsdatabaser.",
+      "xml": "<strong>XML/JSON/XSLT</strong> - Håndtering og transformasjon av dataformater på en effektiv måte.",
+      "blazor": "<strong>Blazor</strong> - Bygge interaktive web-UI-er med C# i stedet for JavaScript.",
+      "react": "<strong>React</strong> - Lage dynamiske brukergrensesnitt med komponentbasert arkitektur.",
+      "angular": "<strong>Angular</strong> - Utvikling av robuste enkeltsideapplikasjoner.",
+      "dotnet": "<strong>.NET</strong> - Omfattende rammeverk for å bygge forskjellige applikasjoner.",
+      "ef": "<strong>Entity Framework (EF)</strong> - ORM-verktøy for å jobbe med databaser i .NET-applikasjoner.",
+      "git": "<strong>Git</strong> - Versjonskontroll for å administrere kode og samarbeid.",
+      "tailwind": "<strong>Tailwind CSS</strong> - Utility-first CSS-rammeverk for rask UI-utvikling."
+    }
   }
 }

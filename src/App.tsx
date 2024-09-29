@@ -22,8 +22,10 @@ import {
 import React from 'react'; // Import React
 import UtleiestyringPage from './pages/proposals/utleiestyring';
 import { LanguageSwitcher } from './components/language-switcher';
+import { useTranslation } from 'react-i18next';
 
 const App = () => {
+  const { t } = useTranslation();
   const [darkMode, setDarkMode] = useState(false); // State for dark mode
   const [menuOpen, setMenuOpen] = useState(false); // State for responsive menu
 
@@ -71,13 +73,13 @@ const App = () => {
                   className="hover:underline text-gray-800 dark:text-gray-300"
                   to={APP_PORTFOLIO_URL}
                 >
-                  Applications
+                  {t('common.applications')}
                 </Link>
                 <Link
                   className="hover:underline text-gray-800 dark:text-gray-300"
                   to={PRIVACY_URL}
                 >
-                  Privacy
+                  {t('common.privacy')}
                 </Link>
                 <a
                   className="hover:underline text-gray-800 dark:text-gray-300"
