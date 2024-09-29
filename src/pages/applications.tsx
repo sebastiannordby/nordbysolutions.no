@@ -17,7 +17,7 @@ const consultingApps = [
         name: 'apps.utleiestyring.name', 
         description: 'apps.utleiestyring.description',
         image: '/images/utleiestyring.png',
-        link: 'https://utleiestyring.no' 
+        link: '/proposals/utleiestyring' 
     }
 ];
 
