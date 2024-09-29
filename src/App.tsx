@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { ContactPage } from './pages/contact';
 import { EducationPage } from './pages/education';
-import { HomePage } from './pages/home';
+import { CVPage } from './pages/cv';
 import { WorkInfoPage, WorkPage } from './pages/work';
 import { PrivacyPage } from './pages/privacy';
 import { LinkedInCallback } from 'react-linkedin-login-oauth2';
@@ -18,11 +18,13 @@ import {
   LINKED_IN_LINK,
   PRIVACY_URL,
   APP_PORTFOLIO_URL,
+  CV_URL,
 } from './pages/constants';
 import React from 'react'; // Import React
 import UtleiestyringPage from './pages/proposals/utleiestyring';
 import { LanguageSwitcher } from './components/language-switcher';
 import { useTranslation } from 'react-i18next';
+import HomePage from './pages/home';
 
 const App = () => {
   const { t } = useTranslation();
@@ -39,7 +41,7 @@ const App = () => {
           <nav className="p-4 flex flex-wrap justify-between items-center max-w-7xl mx-auto">
             <div className="flex items-center justify-between w-full md:w-auto">
               <Link to={'/'}>
-                <h1 className="text-2xl font-bold text-gray-800 dark:text-white">
+                <h1 className="text-xl font-bold text-gray-800 dark:text-white">
                   Nordby Solutions
                 </h1>
               </Link>
@@ -75,11 +77,17 @@ const App = () => {
                 >
                   {t('common.applications')}
                 </Link>
-                <Link
+                {/* <Link
                   className="hover:underline text-gray-800 dark:text-gray-300"
                   to={PRIVACY_URL}
                 >
                   {t('common.privacy')}
+                </Link> */}
+                <Link
+                  className="hover:underline text-gray-800 dark:text-gray-300"
+                  to={CV_URL}
+                >
+                  {t('common.cv')}
                 </Link>
                 <a
                   className="hover:underline text-gray-800 dark:text-gray-300"
@@ -106,10 +114,11 @@ const App = () => {
         </header>
 
         {/* Main content */}
-        <main className="flex-1 p-4 overflow-auto bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+        <main className="flex-1 overflow-auto bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
           <Routes>
             <Route path="/linkedin" element={<LinkedInCallback />} />
             <Route path={HOME_URL} element={<HomePage />} />
+            <Route path={CV_URL} element={<CVPage />} />
             <Route path={EDUCATION_URL} element={<EducationPage />} />
             <Route path={WORK_URL} element={<WorkPage />} />
             <Route path={WORK_INFO_URL} element={<WorkInfoPage />} />

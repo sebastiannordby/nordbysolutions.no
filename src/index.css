@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
 
 :root {
   --light-white: #faf8e5;
@@ -19,9 +25,10 @@
 
 html {
   height: 100%;
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Inter', sans-serif !important;
   font-size: 1.25rem;
 }
+
 body,
 #app {
   min-height: 100vh;
@@ -71,7 +78,6 @@ strong {
 
 /* styles.css */
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
@@ -101,4 +107,14 @@ header {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+}
+
+.hero-bg {
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(112, 246, 255, 0.33) 11.2%,
+    rgba(221, 108, 241, 0.26) 42%,
+    rgba(229, 106, 253, 0.71) 71.5%,
+    rgba(123, 183, 253, 1) 100.2%
+  );
 }

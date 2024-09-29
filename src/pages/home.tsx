@@ -1,132 +1,69 @@
-import React from 'react'; // Import React
 import { useTranslation } from 'react-i18next';
 
-export function HomePage() {
-  return (
-    <div className="flex flex-col w-full h-auto p-4 gap-4">
-      <IntroductionSection />
-      <SkillShowcase />
-    </div>
-  );
-}
+const consultingApps = [
+  {
+    id: 2,
+    name: 'apps.utleiestyring.name',
+    description: 'apps.utleiestyring.description',
+    image: '/images/utleiestyring.png',
+    link: '/proposals/utleiestyring',
+  },
+];
 
-export function IntroductionSection() {
+export default function HomePage() {
   const { t } = useTranslation();
 
   return (
-    <section className="p-6 flex flex-col md:flex-row gap-6 items-center bg-white rounded-lg shadow-md mx-auto max-w-3xl">
-      <div className="flex-1 text-center md:text-left">
-        <h2 className="text-2xl font-bold border-b border-gray-200 pb-2 mb-4">
-          {t('common.welcome_to')} <strong>Nordby Solutions</strong>.
-        </h2>
-        <p className="text-gray-700">
-          {t('description.intro')}{' '}
-          <strong>{t('description.userFriendly')}</strong>{' '}
-          {t('description.and')} <strong>{t('description.efficient')}</strong>{' '}
-          {t('description.focus')} {t('description.soloDeveloper')}{' '}
-          {t('description.personalTouch')}{' '}
-          <strong>{t('description.quality')}</strong> {t('description.and')}{' '}
-          <strong>{t('description.userSatisfaction')}</strong>.
-        </p>
-        <a
-          href="mailto:sebastian@nordbysolutions.no?Subject=Ønsker%20Relasjon"
-          className="mt-4 inline-block px-6 py-2 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
-        >
-          {t('common.contact_me')}
-        </a>
-      </div>
-      <img
-        src="/images/ns_logo.jpg"
-        alt="Tech illustration"
-        className="w-full md:w-80 h-auto rounded-md shadow-md"
-      />
-    </section>
-  );
-}
-
-function SkillShowcase() {
-  const { t } = useTranslation();
-
-  return (
-    <section className="flex flex-col md:flex-row mx-auto w-full max-w-3xl rounded-lg bg-white shadow-md overflow-hidden bg-gradient-to-r from-gray-50 to-gray-100">
-      <div className="p-6 flex flex-col gap-6">
-        <h3 className="text-2xl font-bold text-gray-900">
-          {t('skills.header')}
-        </h3>
-
-        <div className="flex flex-col md:flex-row gap-6">
-          <div className="w-full md:w-1/2">
-            <h4 className="text-xl font-semibold mb-3 text-gray-800 border-b-2 border-gray-300">
-              {t('skills.languagesHeader')}
-            </h4>
-            <ul className="list-disc list-inside text-gray-700">
-              <li
-                dangerouslySetInnerHTML={{
-                  __html: t('skills.skillsList.csharp'),
-                }}
-              />
-              <li
-                dangerouslySetInnerHTML={{
-                  __html: t('skills.skillsList.html'),
-                }}
-              />
-              <li
-                dangerouslySetInnerHTML={{ __html: t('skills.skillsList.css') }}
-              />
-              <li
-                dangerouslySetInnerHTML={{
-                  __html: t('skills.skillsList.javascript'),
-                }}
-              />
-              <li
-                dangerouslySetInnerHTML={{ __html: t('skills.skillsList.sql') }}
-              />
-              <li
-                dangerouslySetInnerHTML={{ __html: t('skills.skillsList.xml') }}
-              />
-            </ul>
-          </div>
-
-          <div className="w-full md:w-1/2">
-            <h4 className="text-xl font-semibold mb-3 text-gray-800 border-b-2 border-gray-300">
-              {t('skills.frameworksHeader')}
-            </h4>
-            <ul className="list-disc list-inside text-gray-700">
-              <li
-                dangerouslySetInnerHTML={{
-                  __html: t('skills.skillsList.blazor'),
-                }}
-              />
-              <li
-                dangerouslySetInnerHTML={{
-                  __html: t('skills.skillsList.react'),
-                }}
-              />
-              <li
-                dangerouslySetInnerHTML={{
-                  __html: t('skills.skillsList.angular'),
-                }}
-              />
-              <li
-                dangerouslySetInnerHTML={{
-                  __html: t('skills.skillsList.dotnet'),
-                }}
-              />
-              <li
-                dangerouslySetInnerHTML={{ __html: t('skills.skillsList.ef') }}
-              />
-              <li
-                dangerouslySetInnerHTML={{ __html: t('skills.skillsList.git') }}
-              />
-              <li
-                dangerouslySetInnerHTML={{
-                  __html: t('skills.skillsList.tailwind'),
-                }}
-              />
-            </ul>
-          </div>
+    <div>
+      <div className="hero-bg min-h-[500px] flex items-center justify-center dark:bg-black">
+        <div className="text-center max-w-xl">
+          <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-white">
+            Fra Enkle Nettsider til Skreddersydde Løsninger
+          </h1>
+          <p className="text-lg mb-6 text-gray-700 dark:text-white">
+            Jeg leverer alt fra profesjonelle nettsider til tilpassede
+            skybaserte systemer. Din visjon, realisert.
+          </p>
+          <a
+            href="mailto:sebastian@nordbysolutions.no?Subject=Ønsker%20Relasjon"
+            className="bg-gray-900 shadow-xl text-white py-3 px-6 rounded-full hover:bg-gray-700 transition"
+          >
+            Kontakt meg i dag
+          </a>
         </div>
       </div>
-    </section>
+
+      <section className="mt-12 mb-6">
+        <h2 className="dark:text-white text-2xl text-center font-semibold mb-4">
+          {t('apps.client_proposal_header')}
+        </h2>
+        <div className="flex flex-col gap-6 items-center mx-auto max-w-3xl">
+          {consultingApps.map((app) => (
+            <div
+              key={app.id}
+              className="p-6 flex flex-col md:flex-row gap-6 items-center bg-white rounded-lg shadow-md w-full"
+            >
+              <img
+                src={app.image}
+                alt={`${t(app.name)} image`}
+                className="w-full md:w-48 h-auto rounded-md shadow-md"
+              />
+              <div className="flex-1 text-center md:text-left">
+                <h2 className="text-2xl font-bold mb-2">{t(app.name)}</h2>
+                <p className="text-gray-700 mb-4">{t(app.description)}</p>
+                <a
+                  href={app.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block border border-blue-500 text-blue-500 px-4 py-2 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300"
+                >
+                  {t('common.explore')}
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
