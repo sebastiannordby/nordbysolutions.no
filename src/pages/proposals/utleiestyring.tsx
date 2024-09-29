@@ -47,7 +47,7 @@ const customerFeedback = [
     }
 ];
 
-const ImageCarousel = ({ images }) => {
+const ImageCarousel = ({ images }: { images: any[]}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const nextSlide = () => {

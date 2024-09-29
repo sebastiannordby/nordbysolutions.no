@@ -2,7 +2,7 @@ import React, {  useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LINKEDIN_CLIENT_ID, LS_LINKEDIN_TOKEN, WORK_INFO_URL } from './constants';
 import { LinkedIn } from 'react-linkedin-login-oauth2';
-import linkedin from 'react-linkedin-login-oauth2/assets/linkedin.png';
+// import linkedin from 'react-linkedin-login-oauth2/assets/linkedin.png';
 
 export function WorkPage() {
     const [hasSignedIn, setHasSignedIn] = useState(false);
@@ -24,7 +24,7 @@ export function WorkPage() {
                 {({ linkedInLogin }) => (
                     <img
                     onClick={linkedInLogin}
-                    src={linkedin}
+                    // src={linkedin}
                     alt="Sign in with Linked In"
                     style={{ maxWidth: '180px', cursor: 'pointer' }}
                     />

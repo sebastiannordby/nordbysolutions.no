@@ -21,6 +21,7 @@ import {
 } from './pages/constants';
 import React from 'react'; // Import React
 import UtleiestyringPage from './pages/proposals/utleiestyring';
+import { LanguageSwitcher } from './components/language-switcher';
 
 const App = () => {
     const [darkMode, setDarkMode] = useState(false); // State for dark mode
@@ -53,6 +54,7 @@ const App = () => {
                                 <a className="hover:underline text-gray-800 dark:text-gray-300" href={GITHUB_LINK} target="_blank" rel="noopener noreferrer">Github</a>
                                 <a className="hover:underline text-gray-800 dark:text-gray-300" href={LINKED_IN_LINK} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                                 <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} /> {/* Dark mode toggle button */}
+                                <LanguageSwitcher />
                             </div>
                         </div>
                     </nav>
@@ -61,7 +63,7 @@ const App = () => {
                 {/* Main content */}
                 <main className="flex-1 p-4 overflow-auto bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
                     <Routes>
-                        <Route exact path="/linkedin" element={<LinkedInCallback />} />
+                        <Route path="/linkedin" element={<LinkedInCallback />} />
                         <Route path={HOME_URL} element={<HomePage />} />
                         <Route path={EDUCATION_URL} element={<EducationPage />} />
                         <Route path={WORK_URL} element={<WorkPage />} />
