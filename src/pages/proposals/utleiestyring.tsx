@@ -124,7 +124,7 @@ export default function UtleiestyringPage() {
   };
 
   return (
-    <MinimalistLayout className="utleiestyring-root overflow-y-auto">
+    <MinimalistLayout className="utleiestyring-root relative">
       <style>
         {`
                     @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap');
@@ -132,7 +132,7 @@ export default function UtleiestyringPage() {
       </style>
 
       {/* Header */}
-      <header className="bg-white dark:bg-gray-900 shadow-md">
+      <header className="bg-white dark:bg-gray-900 fixed top-0 right-0 left-0">
         <nav className="p-4 flex flex-wrap justify-between items-center max-w-7xl mx-auto">
           <div className="flex items-center justify-between w-full md:w-auto">
             <h1 className="font-bold text-xl">Utleiestyring</h1>
@@ -168,8 +168,8 @@ export default function UtleiestyringPage() {
       </header>
 
       {/* Hero Section */}
-      <main className="p-4">
-        <section className="bg-utleiestyring_light py-12 text-center mb-12 rounded-lg shadow-lg p-2">
+      <main className="bg-white  overflow-y-auto">
+        <section className="utleiestyring-bg py-12 min-h-[400px] text-center mb-12 p-4">
           <h2 className="text-3xl font-bold mb-4">
             Velkommen til Fremtiden av Verktøyutleie
           </h2>
@@ -186,7 +186,7 @@ export default function UtleiestyringPage() {
         </section>
 
         {/* Icon Feature Section */}
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 p-4">
           {features.map((feature, index) => (
             <div
               key={index}
