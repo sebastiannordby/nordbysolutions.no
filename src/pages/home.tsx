@@ -14,7 +14,7 @@ const consultingApps = [
     name: 'apps.utleiestyring.name',
     description: 'apps.utleiestyring.description',
     image: '/images/utleiestyring.png',
-    link: '/proposals/utleiestyring',
+    link: 'https://green-smoke-0d948181e.5.azurestaticapps.net',
   },
 ];
 

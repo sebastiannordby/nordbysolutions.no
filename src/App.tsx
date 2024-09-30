@@ -27,7 +27,6 @@ import {
   CV_URL,
 } from './pages/constants';
 import React from 'react'; // Import React
-import UtleiestyringPage from './pages/proposals/utleiestyring';
 import { LanguageSwitcher } from './components/language-switcher';
 import { useTranslation } from 'react-i18next';
 import HomePage from './pages/home';
@@ -147,10 +146,6 @@ const App = () => {
             <Route
               path={APP_PORTFOLIO_URL}
               element={<AppPortfolioPage />}
-            ></Route>
-            <Route
-              path="/proposals/utleiestyring"
-              element={<UtleiestyringPage />}
             ></Route>
           </Routes>
         </main>
