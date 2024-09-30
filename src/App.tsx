@@ -156,8 +156,8 @@ const App = () => {
         </main>
 
         {/* Footer */}
-        <footer className="p-2.5 text-center bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300 shadow-inner">
-          © Nordby Solutions - 2024
+        <footer className="p-2.5 text-center flex gap-2 justify-center items-center bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300 shadow-inner">
+          <span>© Nordby Solutions - 2024</span>
         </footer>
       </div>
     </BrowserRouter>
