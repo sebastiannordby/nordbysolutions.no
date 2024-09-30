@@ -49,3 +49,10 @@ Hope you enjoy your stay 🧙
 // </div>
 // );
 // }
+
+                {/* <Link
+                  className="hover:underline text-gray-800 dark:text-gray-300"
+                  to={PRIVACY_URL}
+                >
+                  {t('common.privacy')}
+                </Link> */}

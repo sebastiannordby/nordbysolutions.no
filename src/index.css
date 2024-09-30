@@ -113,8 +113,28 @@ header {
   background-image: linear-gradient(
     109.6deg,
     rgba(112, 246, 255, 0.33) 11.2%,
-    rgba(221, 108, 241, 0.26) 42%,
+    rgb(128 75 255 / 26%) 42%,
     rgba(229, 106, 253, 0.71) 71.5%,
-    rgba(123, 183, 253, 1) 100.2%
+    rgb(219 253 123) 100.2%
   );
+}
+
+.polka-bg {
+  background-color: #e5e5f7;
+  /* opacity: 0.8; */
+  background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px),
+    radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+  background-size: 20px 20px;
+  background-position:
+    0 0,
+    10px 10px;
+}
+
+.magicpattern {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+  background-image: url('data:image/svg+xml;utf8,%3Csvg width=%222000%22 height=%221400%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22a%22 gradientTransform=%22rotate(90)%22%3E%3Cstop offset=%225%25%22 stop-color=%22%23fff%22%2F%3E%3Cstop offset=%2295%25%22 stop-color=%22%23fff%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath fill=%22%23efedff%22 d=%22M0 0h2000v1400H0z%22%2F%3E%3Cpath d=%22M0 700c119.277 91.713 238.555 183.426 348 176 109.445-7.426 209.058-113.99 319-129 109.942-15.01 230.214 61.533 348 40s233.087-141.143 344-133c110.913 8.143 217.438 144.038 346 135 128.562-9.038 279.16-163.011 332-202 52.84-38.989 7.92 37.005 3 113l-40 700H0Z%22 fill=%22url(%23a)%22%2F%3E%3C%2Fsvg%3E');
 }
