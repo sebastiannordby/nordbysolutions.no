@@ -158,6 +158,18 @@ const App = () => {
         {/* Footer */}
         <footer className="p-2.5 text-center flex gap-2 justify-center items-center bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300 shadow-inner">
           <span>© Nordby Solutions - 2024</span>
+          <div className="relative group">
+            <span className="cursor-pointer">Credits</span>
+
+            <a
+              href="https://www.flaticon.com/free-icons/code"
+              title="code icons"
+              target="_blank"
+              className="absolute left-0 top-[-50px] w-72 mt-1 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-300 px-2 py-1 rounded-md shadow-md hidden group-hover:inline"
+            >
+              Code icons created by Freepik - Flaticon
+            </a>
+          </div>
         </footer>
       </div>
     </BrowserRouter>
