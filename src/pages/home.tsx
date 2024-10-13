@@ -2,11 +2,12 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import {
   APP_PORTFOLIO_URL,
-  CV_URL,
+  SKILLSET_URL,
   GITHUB_LINK,
   LINKED_IN_LINK,
 } from './constants';
 import { useEffect, useState } from 'react';
+import { LanguageSwitcher } from '../components/language-switcher';
 
 const consultingApps = [
   {
@@ -83,9 +84,9 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row gap-4 items-center mt-4 md:mt-0">
               <Link
                 className="hover:underline text-gray-800 dark:text-gray-300"
-                to={CV_URL}
+                to={SKILLSET_URL}
               >
-                {t('common.cv')}
+                {t('common.skillset')}
               </Link>
               <Link
                 className="hover:underline text-gray-800 dark:text-gray-300"
@@ -109,6 +110,7 @@ export default function HomePage() {
               >
                 Github
               </a>
+              <LanguageSwitcher />
             </div>
           </div>
         </nav>
@@ -117,17 +119,16 @@ export default function HomePage() {
         <div className="flex flex-col items-center justify-center px-3 pt-24">
           <div className="text-center max-w-xl">
             <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-white">
-              Fra Enkle Nettsider til Skreddersydde Løsninger
+              {t('home.motto')}
             </h1>
             <p className="text-lg mb-6 text-gray-700 dark:text-white">
-              Jeg leverer alt fra profesjonelle nettsider til tilpassede
-              skybaserte systemer. Din visjon, realisert.
+              {t('home.what.i.deliver')}
             </p>
             <a
               href="mailto:sebastian@nordbysolutions.no?Subject=Ønsker%20Relasjon"
               className="bg-gray-900 shadow-xl text-white py-3 px-6 rounded-full hover:bg-gray-700 transition"
             >
-              Kontakt meg i dag
+              {t('home.contact.me.today')}
             </a>
           </div>
         </div>

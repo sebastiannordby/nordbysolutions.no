@@ -5,7 +5,14 @@
     "applications": "Applikasjoner",
     "privacy": "Personvern",
     "contact_me": "Kontakt Meg",
-    "cv": "Omtaler"
+    "skillset": "Ferdigheter",
+    "frontpage": "Hjem",
+    "selectlanguage": "Velg språk"
+  },
+  "home": {
+    "contact.me.today": "Kontakt meg i dag",
+    "what.i.deliver": "Jeg leverer alt fra profesjonelle nettsider til tilpassede skybaserte systemer. Din visjon, realisert.",
+    "motto": "Fra Enkle Nettsider til Skreddersydde Løsninger"
   },
   "apps": {
     "stinisse": {

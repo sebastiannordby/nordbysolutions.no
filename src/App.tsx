@@ -1,3 +1,7 @@
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 import {
   BrowserRouter,
   Routes,
@@ -7,8 +11,7 @@ import {
 } from 'react-router-dom';
 import { useState } from 'react';
 import { ContactPage } from './pages/contact';
-import { EducationPage } from './pages/education';
-import { CVPage } from './pages/cv';
+import { SkillsetPage } from './pages/skillset';
 import { WorkInfoPage, WorkPage } from './pages/work';
 import { PrivacyPage } from './pages/privacy';
 import { LinkedInCallback } from 'react-linkedin-login-oauth2';
@@ -16,7 +19,6 @@ import { DarkModeToggle } from './components/dark-mode-toggle'; // Custom dark m
 import { AppPortfolioPage } from './pages/applications';
 import {
   HOME_URL,
-  EDUCATION_URL,
   WORK_URL,
   WORK_INFO_URL,
   CONTACT_URL,
@@ -24,7 +26,7 @@ import {
   LINKED_IN_LINK,
   PRIVACY_URL,
   APP_PORTFOLIO_URL,
-  CV_URL,
+  SKILLSET_URL,
 } from './pages/constants';
 import React from 'react'; // Import React
 import { LanguageSwitcher } from './components/language-switcher';
@@ -83,9 +85,15 @@ const Header = ({
           <div className="flex flex-col md:flex-row gap-4 items-center mt-4 md:mt-0">
             <Link
               className="hover:underline text-gray-800 dark:text-gray-300"
-              to={CV_URL}
+              to={HOME_URL}
             >
-              {t('common.cv')}
+              {t('common.frontpage')}
+            </Link>
+            <Link
+              className="hover:underline text-gray-800 dark:text-gray-300"
+              to={SKILLSET_URL}
+            >
+              {t('common.skillset')}
             </Link>
             <Link
               className="hover:underline text-gray-800 dark:text-gray-300"
@@ -137,8 +145,7 @@ const App = () => {
           <Routes>
             <Route path="/linkedin" element={<LinkedInCallback />} />
             <Route path={HOME_URL} element={<HomePage />} />
-            <Route path={CV_URL} element={<CVPage />} />
-            <Route path={EDUCATION_URL} element={<EducationPage />} />
+            <Route path={SKILLSET_URL} element={<SkillsetPage />} />
             <Route path={WORK_URL} element={<WorkPage />} />
             <Route path={WORK_INFO_URL} element={<WorkInfoPage />} />
             <Route path={CONTACT_URL} element={<ContactPage />} />

@@ -1,46 +1,11 @@
 import React from 'react'; // Import React
 import { useTranslation } from 'react-i18next';
 
-export function CVPage() {
+export function SkillsetPage() {
   return (
     <div className="flex flex-col w-full h-auto p-4 gap-4">
-      <IntroductionSection />
       <SkillShowcase />
     </div>
-  );
-}
-
-export function IntroductionSection() {
-  const { t } = useTranslation();
-
-  return (
-    <section className="p-6 flex flex-col md:flex-row gap-6 items-center bg-white rounded-lg shadow-md mx-auto max-w-3xl">
-      <div className="flex-1 text-center md:text-left">
-        <h2 className="text-2xl font-bold border-b border-gray-200 pb-2 mb-4">
-          {t('common.welcome_to')} <strong>Nordby Solutions</strong>.
-        </h2>
-        <p className="text-gray-700">
-          {t('description.intro')}{' '}
-          <strong>{t('description.userFriendly')}</strong>{' '}
-          {t('description.and')} <strong>{t('description.efficient')}</strong>{' '}
-          {t('description.focus')} {t('description.soloDeveloper')}{' '}
-          {t('description.personalTouch')}{' '}
-          <strong>{t('description.quality')}</strong> {t('description.and')}{' '}
-          <strong>{t('description.userSatisfaction')}</strong>.
-        </p>
-        <a
-          href="mailto:sebastian@nordbysolutions.no?Subject=Ønsker%20Relasjon"
-          className="mt-4 inline-block px-6 py-2 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
-        >
-          {t('common.contact_me')}
-        </a>
-      </div>
-      <img
-        src="/images/ns_logo.jpg"
-        alt="Tech illustration"
-        className="w-full md:w-80 h-auto rounded-md shadow-md"
-      />
-    </section>
   );
 }
 

@@ -4,7 +4,14 @@
     "welcome_to": "Welcome to",
     "applications": "Applications",
     "privacy": "Privacy",
-    "contact_me": "Contact me"
+    "contact_me": "Contact me",
+    "skillset": "Skillset",
+    "selectlanguage": "Select language"
+  },
+  "home": {
+    "contact.me.today": "Contact me today",
+    "what.i.deliver": "I deliver everything from professional websites to customized cloud-based systems. Your vision, realized.",
+    "motto": "From Simple Websites to Tailored Solutions"
   },
   "apps": {
     "stinisse": {

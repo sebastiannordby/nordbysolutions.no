@@ -12,6 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@fontsource/roboto": "^5.1.0",
+    "@mui/material": "^6.1.3",
     "@parcel/transformer-postcss": "^2.7.0",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
