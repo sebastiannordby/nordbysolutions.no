@@ -18,6 +18,10 @@
       "name": "Stinisse",
       "description": "Stinisse is your ultimate companion for exploring the great outdoors. Whether you're mountain biking, hiking, or running, Stinisse uses data from Strava to provide detailed trail maps and guided routes through scenic woodland trails. Discover new paths, track your progress, and enhance your outdoor adventures with real-time guidance and personalized trail suggestions. Perfect for outdoor enthusiasts looking to elevate their experience in nature."
     },
+    "livepager": {
+      "name": "LivePager",
+      "description": "LivePager is a scalable real-time tracking application built with Orleans .NET. It is designed to assist in search-and-rescue missions, helping teams track their progress in locating missing people, pets, or other items."
+    },
     "utleiestyring": {
       "name": "Utleiestyring",
       "description": "Utleiestyring is the modern solution for tool rentals and equipment management. Designed for businesses that need full control of their tools, it helps track, maintain, and manage equipment rentals effortlessly. Utleiestyring offers a sleek interface and real-time insights that streamline your rental operations and keep costs under control."

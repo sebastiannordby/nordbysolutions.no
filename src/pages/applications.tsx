@@ -9,6 +9,13 @@ const completedApps = [
     link: 'https://stinisse.no',
     image: '/images/stinisse.jpg',
   },
+  {
+    id: 2,
+    name: 'apps.livepager.name',
+    description: 'apps.liverpager.description',
+    link: 'https://github.com/sebastiannordby/live-pager',
+    image: '/images/livepager.jpg',
+  }
 ];
 
 const consultingApps = [

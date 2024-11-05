@@ -19,6 +19,10 @@
       "name": "Stinisse",
       "description": "Stinisse er din ultimate følgesvenn for å utforske naturen. Enten du driver med terrengsykling, fotturer eller løping, bruker Stinisse data fra Strava for å gi detaljerte kart og guidede ruter gjennom naturskjønne skogsstier. Oppdag nye stier, følg fremgangen din, og forbedre dine naturopplevelser med sanntidsveiledning og personlige stianbefalinger. Perfekt for friluftsentusiaster som ønsker å løfte naturopplevelsene sine."
     },
+    "livepager": {
+      "name": "LivePager",
+      "description": "LivePager er en skalerbar sanntidssporingsapplikasjon bygget med Orleans .NET. Den er designet for å hjelpe i søk-og-redningsoppdrag, og hjelper team med å spore fremdriften i å finne savnede personer, kjæledyr eller andre gjenstander."
+    },
     "utleiestyring": {
       "name": "Utleiestyring.no",
       "description": "Utleiestyring er den moderne løsningen for verktøyutleie og utstyrsadministrasjon. Designet for bedrifter som trenger full kontroll over utstyret sitt, hjelper det med å spore, vedlikeholde og administrere utleie av utstyr uten anstrengelser. Utleiestyring tilbyr et elegant grensesnitt og sanntidsinnsikt som effektiviserer utleieprosesser og holder kostnadene under kontroll."
