@@ -7,9 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        utleiestyring_primary: '#52897f',
-      },
+      colors: {},
     },
   },
   plugins: [],

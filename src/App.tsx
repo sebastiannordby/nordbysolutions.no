@@ -32,6 +32,7 @@ import React from 'react'; // Import React
 import { LanguageSwitcher } from './components/language-switcher';
 import { useTranslation } from 'react-i18next';
 import HomePage from './pages/home';
+import CVPage from './pages/CVPage';
 
 const Header = ({
   setDarkMode,
@@ -95,20 +96,6 @@ const Header = ({
             >
               {t('common.skillset')}
             </Link>
-            <Link
-              className="hover:underline text-gray-800 dark:text-gray-300"
-              to={APP_PORTFOLIO_URL}
-            >
-              {t('common.applications')}
-            </Link>
-            <a
-              className="hover:underline text-gray-800 dark:text-gray-300"
-              href={GITHUB_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Github
-            </a>
             <a
               className="hover:underline text-gray-800 dark:text-gray-300"
               href={LINKED_IN_LINK}
@@ -145,7 +132,7 @@ const App = () => {
           <Routes>
             <Route path="/linkedin" element={<LinkedInCallback />} />
             <Route path={HOME_URL} element={<HomePage />} />
-            <Route path={SKILLSET_URL} element={<SkillsetPage />} />
+            <Route path={SKILLSET_URL} element={<CVPage />} />
             <Route path={WORK_URL} element={<WorkPage />} />
             <Route path={WORK_INFO_URL} element={<WorkInfoPage />} />
             <Route path={CONTACT_URL} element={<ContactPage />} />
