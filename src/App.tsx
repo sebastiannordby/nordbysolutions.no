@@ -43,19 +43,50 @@ const Header = ({
 }) => {
   const { t } = useTranslation();
   const location = useLocation();
-  const [menuOpen, setMenuOpen] = useState(false); // State for responsive menu
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [navBg, setNavBg] = useState('bg-transparent');
+  const visibleNavClass = 'bg-white dark:bg-gray-900 shadow-md';
 
-  if (location?.pathname === '/') {
-    return <></>;
-  }
+  const isHomePage = location?.pathname === '/';
+
+  // Handle scroll event to change navbar background on home page
+  useEffect(() => {
+    if (!isHomePage) return;
+
+    const mainElement = document.querySelector('main') as HTMLDivElement;
+    if (!mainElement) return;
+
+    const handleScroll = () => {
+      if (mainElement.scrollTop > 200) {
+        setNavBg('bg-white dark:bg-gray-900 shadow-md');
+      } else {
+        setNavBg('bg-transparent');
+      }
+    };
+
+    mainElement.addEventListener('scroll', handleScroll);
+
+    return () => {
+      mainElement.removeEventListener('scroll', handleScroll);
+    };
+  }, [isHomePage]);
+
+  const headerClassName = isHomePage
+    ? `fixed w-full transition-colors duration-300 z-50 ${menuOpen ? visibleNavClass : navBg}`
+    : 'bg-white dark:bg-gray-900 shadow-md';
 
   return (
-    <header className="bg-white dark:bg-gray-900 shadow-md">
-      <nav className="p-4 flex flex-wrap justify-between items-center max-w-7xl mx-auto">
+    <header className={headerClassName}>
+      <nav className="p-4 pr-6 flex flex-wrap justify-between items-center max-w-7xl mx-auto">
         <div className="flex items-center justify-between w-full md:w-auto">
           <Link to={'/'}>
-            <h1 className="text-xl font-bold text-gray-800 dark:text-white">
-              Nordby Solutions
+            <h1 className="flex flex-col leading-tight">
+              <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-c_lime">
+                Norso
+              </span>
+              <span className="mt-1 inline-flex items-center gap-2 text-sm sm:text-base text-gray-500 dark:text-white">
+                Nordby Solutions
+              </span>
             </h1>
           </Link>
           <button
@@ -85,19 +116,19 @@ const Header = ({
         >
           <div className="flex flex-col md:flex-row gap-4 items-center mt-4 md:mt-0">
             <Link
-              className="hover:underline text-gray-800 dark:text-gray-300"
+              className="hover:underline text-gray-800 dark:text-white"
               to={HOME_URL}
             >
               {t('common.frontpage')}
             </Link>
             <Link
-              className="hover:underline text-gray-800 dark:text-gray-300"
+              className="hover:underline text-gray-800 dark:text-white"
               to={SKILLSET_URL}
             >
               {t('common.skillset')}
             </Link>
             <a
-              className="hover:underline text-gray-800 dark:text-gray-300"
+              className="hover:underline text-gray-800 dark:text-white"
               href={LINKED_IN_LINK}
               target="_blank"
               rel="noopener noreferrer"
@@ -107,7 +138,7 @@ const Header = ({
             <DarkModeToggle
               darkMode={darkMode}
               setDarkMode={() => setDarkMode(!darkMode)}
-            />{' '}
+            />
             <LanguageSwitcher />
           </div>
         </div>
