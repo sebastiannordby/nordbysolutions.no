@@ -18,7 +18,7 @@ export default function CVPage() {
   });
 
   return (
-    <main className="min-h-screen bg-gray-50 p-6">
+    <div className="min-h-screen sm:p-6">
       <div
         ref={cvRef}
         className="mx-auto max-w-3xl shadow-sm print:shadow-none p-8 bg-white"
@@ -32,11 +32,11 @@ export default function CVPage() {
         aria-label="Eksporter CV som PDF"
         title="Eksporter som PDF"
         className="
-          print:hidden fixed bottom-20 right-6 z-50
+          print:hidden fixed bottom-14 right-6 z-22
           h-14 w-14 rounded-full
           text-white shadow-lg
-          bg-red-400
-          hover:bg-blue-700 hover:shadow-xl
+          bg-c_lime
+          hover:bg-c_purple hover:shadow-xl
           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
           flex items-center justify-center
         "
@@ -44,6 +44,6 @@ export default function CVPage() {
         {/* PDF icon (inline SVG) */}
         <img src="/images/pdf_icon.png"></img>
       </button>
-    </main>
+    </div>
   );
 }

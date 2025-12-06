@@ -54,11 +54,11 @@ export default function HomePage() {
             <div className="flex items-center justify-between w-full md:w-auto">
               <Link to={'/'}>
                 <h1 className="flex flex-col leading-tight">
-                  <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                  <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-c_lime">
                     Norso
                   </span>
 
-                  <span className="mt-1 inline-flex items-center gap-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
+                  <span className="mt-1 inline-flex items-center gap-2 text-sm sm:text-base text-gray-500 dark:text-white">
                     Nordby Solutions
                   </span>
                 </h1>
@@ -89,13 +89,13 @@ export default function HomePage() {
             >
               <div className="flex flex-col md:flex-row gap-4 items-center mt-4 md:mt-0">
                 <Link
-                  className="hover:underline text-gray-800 dark:text-gray-300"
+                  className="hover:underline text-gray-800 dark:text-white"
                   to={SKILLSET_URL}
                 >
                   {t('common.skillset')}
                 </Link>
                 <a
-                  className="hover:underline text-gray-800 dark:text-gray-300"
+                  className="hover:underline text-gray-800 dark:text-white"
                   href={LINKED_IN_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -103,7 +103,7 @@ export default function HomePage() {
                   LinkedIn
                 </a>
                 <a
-                  className="hover:underline text-gray-800 dark:text-gray-300"
+                  className="hover:underline text-gray-800 dark:text-white"
                   href={GITHUB_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -125,8 +125,8 @@ export default function HomePage() {
                 {t('home.what.i.deliver')}
               </p>
               <a
-                href="mailto:sebastian@nordbysolutions.no?Subject=Ønsker%20Relasjon"
-                className="bg-gray-900 shadow-xl text-white py-3 px-6 rounded-full hover:bg-gray-700 transition"
+                href="mailto:post@norso.no?Subject=Ønsker%20Relasjon"
+                className="bg-gray-900 shadow-xl text-white py-3 px-6 rounded-full hover:bg-gray-700 transition dark:bg-c_lime dark:text-black"
               >
                 {t('home.contact.me.today')}
               </a>

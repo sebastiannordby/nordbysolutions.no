@@ -178,7 +178,7 @@ export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
 
       {EXPERIENCE.map((exp, index) => (
         <article key={index} className="mb-4 break-inside-avoid">
-          <div className="flex justify-between">
+          <div className="flex justify-between flex-wrap">
             <h3 className="font-medium">{exp.title}</h3>
             <span className="text-gray-600">{exp.timeInCompany}</span>
           </div>
@@ -205,7 +205,7 @@ export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
         <div className="space-y-4">
           {EDUCATION.map((edu, idx) => (
             <article key={idx} className="mb-4 break-inside-avoid">
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between flex-wrap">
                 <h3 className="font-medium text-gray-900">{edu.institution}</h3>
                 <span className="text-gray-600 mt-1 sm:mt-0">
                   {edu.timeline}

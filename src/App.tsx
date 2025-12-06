@@ -9,7 +9,7 @@ import {
   Link,
   useLocation,
 } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ContactPage } from './pages/contact';
 import { SkillsetPage } from './pages/skillset';
 import { WorkInfoPage, WorkPage } from './pages/work';
@@ -119,13 +119,29 @@ const Header = ({
 const App = () => {
   const [darkMode, setDarkMode] = useState(false); // State for dark mode
 
+  useEffect(() => {
+    const savedMode = localStorage.getItem('darkMode');
+
+    if (savedMode) {
+      setDarkMode(savedMode === 'true');
+    }
+  }, []);
+
+  const setDarkModeAndSave = (val: boolean) => {
+    setDarkMode(val);
+    localStorage.setItem('darkMode', val.toString());
+  };
+
   return (
     <BrowserRouter>
       <div
         className={`flex flex-col w-full h-screen ${darkMode ? 'dark' : ''}`}
       >
         {/* Header */}
-        <Header setDarkMode={(val) => setDarkMode(val)} darkMode={darkMode} />
+        <Header
+          setDarkMode={(val) => setDarkModeAndSave(val)}
+          darkMode={darkMode}
+        />
 
         {/* Main content */}
         <main className="flex-1 overflow-auto bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
@@ -136,7 +152,6 @@ const App = () => {
             <Route path={WORK_URL} element={<WorkPage />} />
             <Route path={WORK_INFO_URL} element={<WorkInfoPage />} />
             <Route path={CONTACT_URL} element={<ContactPage />} />
-            <Route path={PRIVACY_URL} element={<PrivacyPage />} />
             <Route
               path={APP_PORTFOLIO_URL}
               element={<AppPortfolioPage />}
@@ -145,20 +160,8 @@ const App = () => {
         </main>
 
         {/* Footer */}
-        <footer className="p-2.5 text-center flex gap-2 justify-center items-center bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300 shadow-inner">
-          <span>© Nordby Solutions - 2024</span>
-          <div className="relative group">
-            <span className="cursor-pointer">Credits</span>
-
-            <a
-              href="https://www.flaticon.com/free-icons/code"
-              title="code icons"
-              target="_blank"
-              className="absolute left-0 top-[-50px] w-72 mt-1 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-300 px-2 py-1 rounded-md shadow-md hidden group-hover:inline"
-            >
-              Code icons created by Freepik - Flaticon
-            </a>
-          </div>
+        <footer className="p-1 text-center flex gap-2 justify-center items-center bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300">
+          <span>© Nordby Solutions - 2026</span>
         </footer>
       </div>
     </BrowserRouter>
