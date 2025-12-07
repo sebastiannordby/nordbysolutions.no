@@ -10,25 +10,15 @@ import {
   useLocation,
 } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { ContactPage } from './pages/contact';
-import { SkillsetPage } from './pages/skillset';
-import { WorkInfoPage, WorkPage } from './pages/work';
-import { PrivacyPage } from './pages/privacy';
 import { LinkedInCallback } from 'react-linkedin-login-oauth2';
 import { DarkModeToggle } from './components/dark-mode-toggle'; // Custom dark mode toggle component
 import { AppPortfolioPage } from './pages/applications';
 import {
   HOME_URL,
-  WORK_URL,
-  WORK_INFO_URL,
-  CONTACT_URL,
-  GITHUB_LINK,
   LINKED_IN_LINK,
-  PRIVACY_URL,
   APP_PORTFOLIO_URL,
   SKILLSET_URL,
 } from './pages/constants';
-import React from 'react'; // Import React
 import { LanguageSwitcher } from './components/language-switcher';
 import { useTranslation } from 'react-i18next';
 import HomePage from './pages/home';
@@ -48,6 +38,10 @@ const Header = ({
   const visibleNavClass = 'bg-white dark:bg-gray-900 shadow-md';
 
   const isHomePage = location?.pathname === '/';
+
+  useEffect(() => {
+    setMenuOpen(false); // Close menu on route change
+  }, [location]);
 
   // Handle scroll event to change navbar background on home page
   useEffect(() => {
@@ -180,9 +174,6 @@ const App = () => {
             <Route path="/linkedin" element={<LinkedInCallback />} />
             <Route path={HOME_URL} element={<HomePage />} />
             <Route path={SKILLSET_URL} element={<CVPage />} />
-            <Route path={WORK_URL} element={<WorkPage />} />
-            <Route path={WORK_INFO_URL} element={<WorkInfoPage />} />
-            <Route path={CONTACT_URL} element={<ContactPage />} />
             <Route
               path={APP_PORTFOLIO_URL}
               element={<AppPortfolioPage />}
