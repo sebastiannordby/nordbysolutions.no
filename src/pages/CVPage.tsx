@@ -1,5 +1,4 @@
-// src/pages/CVPage.tsx
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import { CV } from '../components/CV';
 
@@ -41,8 +40,7 @@ export default function CVPage() {
           flex items-center justify-center
         "
       >
-        {/* PDF icon (inline SVG) */}
-        <img src="/images/pdf_icon.png"></img>
+        <img className="max-w-[34px]" src="/images/pdf_icon.png"></img>
       </button>
     </div>
   );
