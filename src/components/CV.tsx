@@ -7,13 +7,7 @@ export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
     <section className="border-b pb-4 mb-6">
       <h1 className="text-3xl font-bold">Sebastian Nordby</h1>
       <p className="text-sm text-gray-600">
-        post@norso.no • +47 479 64 635 • norso.no •{' '}
-        <a
-          className="underline"
-          href="https://www.linkedin.com/in/sebastian-nordby-b45087152/"
-        >
-          LinkedIn
-        </a>
+        post@norso.no • +47 479 64 635 • norso.no
       </p>
     </section>
 
