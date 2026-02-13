@@ -34,6 +34,7 @@ export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
       <h2 className="text-xl font-semibold mb-4">Erfaring</h2>
 
       {/* Tech Lead */}
+      {/* Tech Lead */}
       <article className="mb-8">
         <div className="flex justify-between flex-wrap">
           <h3 className="font-medium text-lg">Tech Lead – Apotek 1</h3>
@@ -43,31 +44,46 @@ export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
 
         <p className="mt-2">
           Ansvar for et team bestående av 3 seniorutviklere, 1 mid‑level, 1
-          lærling og 1 praksiselev. Rollen innebærer fortsatt utviklingsarbeid,
-          men med et bredere ansvar. Teamet har ikke tradisjonelle roller som
-          produkteier, kodearkitekt eller løsningsarkitekt – disse funksjonene
-          faller på meg.
+          lærling og 1 praksiselev. Rollen kombinerer tung teknisk
+          implementasjon med ledelse, arkitektur og koordinering. Teamet har
+          ingen dedikerte roller som produkteier, løsningsarkitekt eller
+          kodearkitekt – disse funksjonene ligger hos meg.
+        </p>
+
+        <p className="mt-2">
+          Jeg driver kontinuerlig planlegging i Jira, estimering, oppfølging av
+          sprintmål og kvalitetssikring av leveranser. Jeg dokumenterer
+          arkitektur, beslutninger og tekniske retningslinjer i Confluence for å
+          sikre felles forståelse og langsiktig vedlikeholdbarhet.
+        </p>
+
+        <p className="mt-2">
+          Jeg koder fortsatt en betydelig del selv, både i backend og frontend,
+          og tar ansvar for komplekse oppgaver som krever dyp domeneforståelse,
+          refaktorering, modernisering og forbedring av teknisk gjeld. Jeg
+          fungerer som sparringspartner for utviklerne og sikrer at teamet
+          følger gode mønstre, prinsipper og arkitekturvalg.
         </p>
 
         <p className="mt-2">
           Jeg holder statusmøter med teamet og andre interessenter, og sørger
-          for riktig prioritering mellom nye features/utvidelser og teknisk
-          gjeld (som er hovedfokus). Jeg koordinerer med plattformteamet for å
-          sikre nødvendige ressurser i Azure. Utviklere kan ikke sette opp
-          landing zones selv, så vi følger standardiserte formater og
-          konfigurerer resten via Bicep/IaC.
+          for riktig prioritering mellom nye features og teknisk gjeld. Jeg
+          koordinerer tett med plattformteamet for å sikre riktige
+          Azure‑ressurser. Utviklere kan ikke sette opp landing zones selv, så
+          jeg sørger for at vi følger standardiserte formater og konfigurerer
+          resten via Bicep/IaC.
         </p>
 
         <p className="mt-2">
-          Jeg sørger for at teamet leverer godt og ikke møter unødvendige
-          hindringer.
+          Overordnet sørger jeg for at teamet leverer godt, har tydelige mål, og
+          ikke møter unødvendige hindringer i utviklingsløpet.
         </p>
 
         <h4 className="font-medium mt-3">Teknologier:</h4>
         <p>
           C#, ASP.NET Core, .NET Framework, React, SQL Server, Azure DevOps,
           Azure, Bicep, WinUI, WPF, UWP, databaseprofilering, diagramtegning,
-          gRPC
+          gRPC, Jira, Confluence
         </p>
 
         <h4 className="font-medium mt-3">Rollefordeling:</h4>
