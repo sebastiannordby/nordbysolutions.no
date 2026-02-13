@@ -34,7 +34,6 @@ export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
       <h2 className="text-xl font-semibold mb-4">Erfaring</h2>
 
       {/* Tech Lead */}
-      {/* Tech Lead */}
       <article className="mb-8">
         <div className="flex justify-between flex-wrap">
           <h3 className="font-medium text-lg">Tech Lead – Apotek 1</h3>
@@ -48,6 +47,26 @@ export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
           implementasjon med ledelse, arkitektur og koordinering. Teamet har
           ingen dedikerte roller som produkteier, løsningsarkitekt eller
           kodearkitekt – disse funksjonene ligger hos meg.
+        </p>
+
+        <p className="mt-2">
+          Jeg jobber med systemer på tvers av flere domener i organisasjonen.
+          Noen av løsningene er kommersielle systemer som håndterer
+          kampanjeplanlegging, vareforsyning og butikkstøtte, mens andre er mer
+          tekniske og operasjonelle systemer som omhandler lagerstyring,
+          logistikkflyt og produksjon av medisiner. Dette krever bred
+          domeneforståelse og evne til å se helheten i verdikjeden.
+        </p>
+
+        <p className="mt-2">
+          Arbeidet foregår i et miljø med strenge krav til sikkerhet, compliance
+          og håndtering av sensitive data. Systemene er delt inn i ulike
+          sikkerhetssoner med forskjellige tilgangsnivåer og restriksjoner – fra
+          soner som er tilgjengelige for interne brukere med lavere
+          sensitivitet, til soner med høyere sikkerhetskrav, begrenset
+          nettverkstilgang og særskilte krav til logging, sporbarhet og
+          kontrollert dataflyt. All utvikling må ta hensyn til disse sonene og
+          sikre korrekt og trygg kommunikasjon mellom dem.
         </p>
 
         <p className="mt-2">
