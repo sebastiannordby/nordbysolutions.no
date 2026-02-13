@@ -95,6 +95,7 @@ export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
       </article>
 
       {/* .NET Developer */}
+      {/* .NET Developer */}
       <article className="mb-8">
         <div className="flex justify-between flex-wrap">
           <h3 className="font-medium text-lg">.NET‑utvikler – Apotek 1</h3>
@@ -103,35 +104,61 @@ export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
         <p className="text-gray-700">Lørenskog, Norge</p>
 
         <p className="mt-2">
-          Jeg ble ansatt på grunn av erfaring med legacy‑systemer. Apotek 1 har
-          flere systemkritiske løsninger basert på utdaterte teknologier,
-          manglende sikkerhetspraksis, svak resiliens, tight coupling, .NET
-          Framework, WCF og klient‑til‑database‑arkitektur. Jeg hadde også
-          ansvar for mentorering av praksiselever og for å rekruttere/evaluere
-          elever fra videregående skole.
+          Jeg ble ansatt på grunn av erfaring med modernisering av
+          legacy‑systemer. Apotek 1 har flere systemkritiske løsninger basert på
+          utdaterte teknologier, manglende sikkerhetspraksis, svak resiliens,
+          tight coupling, .NET Framework, WCF og klient‑til‑database‑arkitektur.
+          Jeg hadde også ansvar for mentorering av praksiselever og for å
+          rekruttere/evaluere elever fra videregående skole.
+        </p>
+
+        <p className="mt-2">
+          Arbeidet foregikk i et miljø med strenge krav til compliance,
+          sikkerhet og håndtering av pasientvern og personvern. Systemene er
+          delt inn i ulike sikkerhetssoner med forskjellige tilgangsnivåer og
+          restriksjoner, der noen soner er tilgjengelige for interne brukere med
+          lavere sensitivitet, mens andre soner krever høyere sikkerhetsnivå,
+          strengere kontroll, begrenset nettverkstilgang og særskilte krav til
+          logging, sporbarhet og databehandling. All utvikling måtte ta hensyn
+          til disse sonene og sikre korrekt dataflyt mellom dem.
         </p>
 
         <h4 className="font-medium mt-3">Mine oppgaver:</h4>
         <ul className="list-disc ml-5">
-          <li>Migrere WCF‑tjenester til ASP.NET Core</li>
+          <li>Migrere WCF‑tjenester til moderne ASP.NET Core‑baserte API‑er</li>
           <li>
             Konvertere klient‑til‑database‑løsninger til API‑basert arkitektur
             (tykkklient → API)
           </li>
-          <li>Drift og feilretting av systemene</li>
+          <li>
+            Drift, feilretting og stabilisering av systemkritiske løsninger
+          </li>
           <li>Fornye og erstatte integrasjoner (f.eks. SOAP → HTTP)</li>
+          <li>
+            Sikre at løsninger oppfylte krav til sikkerhet, personvern og
+            soneskiller mellom ulike nivåer av sensitivitet
+          </li>
+          <li>
+            Dokumentasjon av tekniske beslutninger, arkitektur og prosesser i
+            Confluence
+          </li>
+          <li>
+            Planlegging, estimering og oppfølging av arbeid i Jira sammen med
+            teamet
+          </li>
         </ul>
 
         <p className="mt-2">
           Arbeidet var i hovedsak knyttet til teknisk gjeld og modernisering.
           Sluttmålet er sky/Azure, men første steg var å få koden oppdatert,
-          isolert og abstrahert.
+          isolert og abstrahert slik at systemene kunne bevege seg i retning av
+          en mer robust, sikker og fremtidsrettet arkitektur.
         </p>
 
         <h4 className="font-medium mt-3">Teknologier:</h4>
         <p>
           C#, ASP.NET Core, .NET Framework, React, SQL Server, Azure DevOps,
-          Azure, Bicep, WinUI, WPF, UWP, diagramtegning, gRPC
+          Azure, Bicep, WinUI, WPF, UWP, diagramtegning, gRPC, Jira, Confluence
         </p>
       </article>
 
