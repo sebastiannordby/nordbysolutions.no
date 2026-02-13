@@ -208,7 +208,8 @@ export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
 
         <p className="mt-2">
           Systemet skulle erstatte to legacy‑systemer. Jeg var eneste utvikler
-          på frontend, og backend bestod av 1,5–3 utviklere avhengig av periode.
+          på frontend, og backend bestod av 1 til 3 utviklere avhengig av
+          periode, der jeg var alltid involvert.
         </p>
 
         <h4 className="font-medium mt-3">Backoffice‑systemet omfattet:</h4>
