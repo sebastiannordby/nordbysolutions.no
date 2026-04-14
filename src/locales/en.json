@@ -1,4 +1,22 @@
 {
+  "nav": {
+    "projects": "Projects",
+    "cv": "CV"
+  },
+  "hero": {
+    "tagline": "Senior .NET Developer & Tech Lead",
+    "bio": "Building robust, maintainable systems with a focus on clean architecture and pragmatic engineering. Currently Tech Lead at Apotek 1.",
+    "contact": "Get in touch",
+    "viewCv": "View CV"
+  },
+  "projects": {
+    "title": "Projects",
+    "visit": "Visit project",
+    "sjekklista": {
+      "name": "Sjekklista",
+      "description": "A family checklist app. Todos, reminders, and a weekly overview — all in one place. Free to use, no setup required."
+    }
+  },
   "common": {
     "explore": "Explore",
     "welcome_to": "Welcome to",

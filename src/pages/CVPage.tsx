@@ -34,9 +34,9 @@ export default function CVPage() {
           print:hidden fixed bottom-14 right-6 z-22
           h-14 w-14 rounded-full
           text-white shadow-lg
-          bg-c_lime
-          hover:bg-c_purple hover:shadow-xl
-          focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
+          bg-gray-900
+          hover:bg-gray-700 hover:shadow-xl
+          focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500
           flex items-center justify-center
         "
       >

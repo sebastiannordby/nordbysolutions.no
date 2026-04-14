@@ -1,4 +1,22 @@
 {
+  "nav": {
+    "projects": "Prosjekter",
+    "cv": "CV"
+  },
+  "hero": {
+    "tagline": "Senior .NET-utvikler & Tech Lead",
+    "bio": "Bygger robuste, vedlikeholdbare systemer med fokus på ren arkitektur og pragmatisk utvikling. Nåværende stilling: Tech Lead hos Apotek 1.",
+    "contact": "Ta kontakt",
+    "viewCv": "Se CV"
+  },
+  "projects": {
+    "title": "Prosjekter",
+    "visit": "Besøk prosjekt",
+    "sjekklista": {
+      "name": "Sjekklista",
+      "description": "En sjekkliste-app for hele familien. Gjøremål, påminnelser og ukesplan på ett sted — gratis å bruke, ingen oppsett nødvendig."
+    }
+  },
   "common": {
     "explore": "Utforsk",
     "welcome_to": "Velkommen til",
