@@ -11,8 +11,7 @@ import { DarkModeToggle } from './components/dark-mode-toggle';
 import {
   HOME_URL,
   LINKED_IN_LINK,
-  SKILLSET_URL,
-  GITHUB_LINK,
+  SKILLSET_URL
 } from './pages/constants';
 import { LanguageSwitcher } from './components/language-switcher';
 import { useTranslation } from 'react-i18next';
@@ -123,14 +122,6 @@ const Header = ({
           >
             {t('nav.cv')}
           </Link>
-          <a
-            href={GITHUB_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={navLinkClass}
-          >
-            GitHub
-          </a>
           <a
             href={LINKED_IN_LINK}
             target="_blank"
