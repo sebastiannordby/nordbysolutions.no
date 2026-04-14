@@ -55,14 +55,6 @@ const Header = ({
             {t('nav.cv')}
           </Link>
           <a
-            href={GITHUB_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={navLinkClass}
-          >
-            GitHub
-          </a>
-          <a
             href={LINKED_IN_LINK}
             target="_blank"
             rel="noopener noreferrer"
