@@ -3,379 +3,255 @@ import React from 'react';
 
 export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
   <div ref={ref} className="bg-white text-gray-900 font-sans leading-relaxed">
+
     {/* Header */}
     <section className="border-b pb-4 mb-6">
       <h1 className="text-3xl font-bold">Sebastian Nordby</h1>
-      <p className="text-sm text-gray-600">
-        post@norso.no • +47 479 64 635 • norso.no
+      <p className="text-sm text-gray-500 mt-1">
+        post@norso.no · +47 479 64 635 · norso.no · LinkedIn
       </p>
     </section>
 
     {/* Summary */}
-    <section className="mb-10">
-      <h2 className="text-xl font-semibold mb-2">Sammendrag</h2>
-      <p>
-        Senior .NET-utvikler og Tech Lead med erfaring innen modernisering av
-        legacy‑systemer, domenedrevet utvikling, API‑design, skyarkitektur og
-        teknisk gjeld. Jeg trives i skjæringspunktet mellom dyp teknisk
-        implementasjon og strukturert teamledelse, og har lang erfaring med å
-        bygge robuste systemer, mentorere utviklere og sikre stabile leveranser.
+    <section className="mb-8">
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Sammendrag</h2>
+      <p className="text-gray-800 leading-relaxed">
+        Senior systemutvikler med 8 års erfaring fra forretningskritiske systemer
+        i regulerte bransjer, og Tech Lead-rolle hos Apotek 1.
+        Spesialisert på modernisering av legacy-arkitektur, domenedrevet design
+        og API-utvikling i .NET. Jobber mye med kode, eier teknisk retning og
+        sørger for at leveranser er forankret i forretningsmål, sikkerhetsmål og
+        referansearkitektur. Systemene er forretningskritiske og krever høy SLA
+        for å sikre drift av hele Apotek 1-kjeden.
       </p>
     </section>
 
     {/* Experience */}
     <section className="mb-10">
-      <h2 className="text-xl font-semibold mb-4">Erfaring</h2>
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-5">Erfaring</h2>
 
-      {/* Tech Lead */}
-      <article className="mb-8">
-        <div className="flex justify-between flex-wrap">
-          <h3 className="font-medium text-lg">Tech Lead – Apotek 1</h3>
-          <span className="text-gray-600">januar 2025 – nå</span>
+      {/* Senior / Tech Lead */}
+      <article className="mb-8 border-l-2 border-gray-200 pl-4">
+        <div className="flex justify-between flex-wrap gap-1">
+          <h3 className="font-semibold text-base">Senior Systemutvikler (Tech Lead) – Apotek 1</h3>
+          <span className="text-sm text-gray-500">januar 2025 – nå</span>
         </div>
-        <p className="text-gray-700">Lørenskog, Norge</p>
+        <p className="text-sm text-gray-500 mb-3">Lørenskog, Norge</p>
 
-        <p className="mt-2">
-          Ansvar for et team bestående av 3 seniorutviklere, 1 mid‑level, 1
-          lærling og 1 praksiselev. Rollen kombinerer tung teknisk
-          implementasjon med ledelse, arkitektur og koordinering. Teamet har
-          ingen dedikerte roller som produkteier, løsningsarkitekt eller
-          kodearkitekt – disse funksjonene ligger hos meg.
+        <p className="text-gray-800 mb-3">
+          Leder et tverrfaglig team på 6 utviklere uten dedikerte roller for
+          produkteier, løsningsarkitekt eller kodearkitekt. Disse
+          ansvarsområdene eier jeg. Systemene er forretningskritiske og drifter
+          hele Apotek 1-kjeden, og krever høy oppetid og stabil drift.
         </p>
 
-        <p className="mt-2">
-          Jeg jobber med systemer på tvers av flere domener i organisasjonen.
-          Noen av løsningene er kommersielle systemer som håndterer
-          kampanjeplanlegging, vareforsyning og butikkstøtte, mens andre er mer
-          tekniske og operasjonelle systemer som omhandler lagerstyring,
-          logistikkflyt og produksjon av medisiner. Dette krever bred
-          domeneforståelse og evne til å se helheten i verdikjeden.
+        <p className="text-gray-800 mb-3">
+          Porteføljen spenner over kommersielle domener som kampanjeplanlegging,
+          vareforsyning og butikkstøtte, samt operasjonelle systemer innen
+          lagerstyring, logistikkflyt og medisinproduksjon. Systemene er
+          segmentert i sikkerhetssoner med ulike tilgangsnivåer og
+          nettverksisolasjon, med strenge krav til logging, sporbarhet og
+          dataflyt regulert av pasientvern og legemiddellovgivning.
         </p>
 
-        <p className="mt-2">
-          Arbeidet foregår i et miljø med strenge krav til sikkerhet, compliance
-          og håndtering av sensitive data. Systemene er delt inn i ulike
-          sikkerhetssoner med forskjellige tilgangsnivåer og restriksjoner – fra
-          soner som er tilgjengelige for interne brukere med lavere
-          sensitivitet, til soner med høyere sikkerhetskrav, begrenset
-          nettverkstilgang og særskilte krav til logging, sporbarhet og
-          kontrollert dataflyt. All utvikling må ta hensyn til disse sonene og
-          sikre korrekt og trygg kommunikasjon mellom dem.
+        <p className="text-gray-800 mb-3">
+          Definerer arkitekturretning og forankrer tekniske valg i forretningsmål,
+          sikkerhetsmål og referansearkitektur. Avveier ny funksjonalitet mot
+          teknisk gjeld og koordinerer med plattformteamet for riktig
+          Azure-infrastruktur via Bicep/IaC. Arkitekturvalg og tekniske
+          retningslinjer dokumenteres løpende i Confluence.
         </p>
 
-        <p className="mt-2">
-          Jeg driver kontinuerlig planlegging i Jira, estimering, oppfølging av
-          sprintmål og kvalitetssikring av leveranser. Jeg dokumenterer
-          arkitektur, beslutninger og tekniske retningslinjer i Confluence for å
-          sikre felles forståelse og langsiktig vedlikeholdbarhet.
+        <p className="text-gray-800 mb-3">
+          Tar et strukturert tak på teknisk gjeld i systemkritiske løsninger:
+          kartlegger risikofylte avhengigheter, utarbeider migrasjonsstrategier og
+          gjennomfører modernisering uten å forstyrre produksjonsdrift. Konkret
+          arbeid inkluderer refaktorering mot domenedrevet design, innføring av
+          tydelige API-grenser og fjerning av tykk-klient-til-database-mønstre.
         </p>
 
-        <p className="mt-2">
-          Jeg koder fortsatt en betydelig del selv, både i backend og frontend,
-          og tar ansvar for komplekse oppgaver som krever dyp domeneforståelse,
-          refaktorering, modernisering og forbedring av teknisk gjeld. Jeg
-          fungerer som sparringspartner for utviklerne og sikrer at teamet
-          følger gode mønstre, prinsipper og arkitekturvalg.
+        <p className="text-gray-800 mb-3">
+          Er fortsatt mye i koden selv, særlig på komplekse backend-oppgaver
+          som krever dyp domeneforståelse og høye krav til ytelse, resiliens og
+          sikkerhet. Fungerer som teknisk sparringspartner og holder teamet på
+          rett kurs innen arkitektur, mønstre og kodekvalitet.
         </p>
 
-        <p className="mt-2">
-          Jeg holder statusmøter med teamet og andre interessenter, og sørger
-          for riktig prioritering mellom nye features og teknisk gjeld. Jeg
-          koordinerer tett med plattformteamet for å sikre riktige
-          Azure‑ressurser. Utviklere kan ikke sette opp landing zones selv, så
-          jeg sørger for at vi følger standardiserte formater og konfigurerer
-          resten via Bicep/IaC.
-        </p>
-
-        <p className="mt-2">
-          Overordnet sørger jeg for at teamet leverer godt, har tydelige mål, og
-          ikke møter unødvendige hindringer i utviklingsløpet.
-        </p>
-
-        <h4 className="font-medium mt-3">Teknologier:</h4>
-        <p>
-          C#, ASP.NET Core, .NET Framework, React, SQL Server, Azure DevOps,
-          Azure, Bicep, WinUI, WPF, UWP, databaseprofilering, diagramtegning,
-          gRPC, Jira, Confluence
-        </p>
-
-        <h4 className="font-medium mt-3">Rollefordeling:</h4>
-        <ul className="list-disc ml-5">
-          <li>60 % koding</li>
-          <li>30 % mentorering/oppfølging</li>
-          <li>10 % planlegging, møter og koordinering</li>
-        </ul>
+        <div className="mt-3">
+          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">Teknologier</span>
+          <p className="text-sm text-gray-600 mt-1">
+            C#, ASP.NET Core, .NET Framework, React, SQL Server, Azure, Azure DevOps,
+            Bicep, gRPC, WinUI, WPF, Jira, Confluence
+          </p>
+        </div>
       </article>
 
       {/* .NET Developer */}
-      {/* .NET Developer */}
-      <article className="mb-8">
-        <div className="flex justify-between flex-wrap">
-          <h3 className="font-medium text-lg">.NET‑utvikler – Apotek 1</h3>
-          <span className="text-gray-600">februar 2024 – januar 2025</span>
+      <article className="mb-8 border-l-2 border-gray-200 pl-4">
+        <div className="flex justify-between flex-wrap gap-1">
+          <h3 className="font-semibold text-base">.NET-utvikler – Apotek 1</h3>
+          <span className="text-sm text-gray-500">februar 2024 – januar 2025</span>
         </div>
-        <p className="text-gray-700">Lørenskog, Norge</p>
+        <p className="text-sm text-gray-500 mb-3">Lørenskog, Norge</p>
 
-        <p className="mt-2">
-          Jeg ble ansatt på grunn av erfaring med modernisering av
-          legacy‑systemer. Apotek 1 har flere systemkritiske løsninger basert på
-          utdaterte teknologier, manglende sikkerhetspraksis, svak resiliens,
-          tight coupling, .NET Framework, WCF og klient‑til‑database‑arkitektur.
-          Jeg hadde også ansvar for mentorering av praksiselever og for å
-          rekruttere/evaluere elever fra videregående skole.
+        <p className="text-gray-800 mb-3">
+          Hentet inn spesifikt for å modernisere systemkritisk legacy-kode.
+          Kartla og jobbet ned teknisk gjeld i løsninger basert på .NET Framework,
+          WCF og direkte klient-til-database-arkitektur. Systemene hadde
+          manglende sikkerhetspraksis, svak resiliens og tett kobling på tvers
+          av domener.
         </p>
 
-        <p className="mt-2">
-          Arbeidet foregikk i et miljø med strenge krav til compliance,
-          sikkerhet og håndtering av pasientvern og personvern. Systemene er
-          delt inn i ulike sikkerhetssoner med forskjellige tilgangsnivåer og
-          restriksjoner, der noen soner er tilgjengelige for interne brukere med
-          lavere sensitivitet, mens andre soner krever høyere sikkerhetsnivå,
-          strengere kontroll, begrenset nettverkstilgang og særskilte krav til
-          logging, sporbarhet og databehandling. All utvikling måtte ta hensyn
-          til disse sonene og sikre korrekt dataflyt mellom dem.
-        </p>
-
-        <h4 className="font-medium mt-3">Mine oppgaver:</h4>
-        <ul className="list-disc ml-5">
-          <li>Migrere WCF‑tjenester til moderne ASP.NET Core‑baserte API‑er</li>
-          <li>
-            Konvertere klient‑til‑database‑løsninger til API‑basert arkitektur
-            (tykkklient → API)
-          </li>
-          <li>
-            Drift, feilretting og stabilisering av systemkritiske løsninger
-          </li>
-          <li>Fornye og erstatte integrasjoner (f.eks. SOAP → HTTP)</li>
-          <li>
-            Sikre at løsninger oppfylte krav til sikkerhet, personvern og
-            soneskiller mellom ulike nivåer av sensitivitet
-          </li>
-          <li>
-            Dokumentasjon av tekniske beslutninger, arkitektur og prosesser i
-            Confluence
-          </li>
-          <li>
-            Planlegging, estimering og oppfølging av arbeid i Jira sammen med
-            teamet
-          </li>
+        <ul className="list-disc ml-5 text-gray-800 space-y-1 mb-3">
+          <li>Migrerte WCF-tjenester til ASP.NET Core REST/gRPC-baserte API-er</li>
+          <li>Brøt opp tykk-klient-til-database-mønstre til API-basert arkitektur</li>
+          <li>Erstattet SOAP-integrasjoner med moderne HTTP-grensesnitt</li>
+          <li>Sikret korrekt dataflyt mellom sikkerhetssoner med ulik sensitivitet</li>
+          <li>Mentorerte praksiselever og bidro til rekruttering fra videregående</li>
         </ul>
 
-        <p className="mt-2">
-          Arbeidet var i hovedsak knyttet til teknisk gjeld og modernisering.
-          Sluttmålet er sky/Azure, men første steg var å få koden oppdatert,
-          isolert og abstrahert slik at systemene kunne bevege seg i retning av
-          en mer robust, sikker og fremtidsrettet arkitektur.
-        </p>
-
-        <h4 className="font-medium mt-3">Teknologier:</h4>
-        <p>
-          C#, ASP.NET Core, .NET Framework, React, SQL Server, Azure DevOps,
-          Azure, Bicep, WinUI, WPF, UWP, diagramtegning, gRPC, Jira, Confluence
-        </p>
+        <div className="mt-3">
+          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">Teknologier</span>
+          <p className="text-sm text-gray-600 mt-1">
+            C#, ASP.NET Core, .NET Framework, React, SQL Server, Azure, Bicep, gRPC, WinUI, WPF
+          </p>
+        </div>
       </article>
 
       {/* System Developer */}
-      <article className="mb-8">
-        <div className="flex justify-between flex-wrap">
-          <h3 className="font-medium text-lg">Systemutvikler – ECIT WLCOM</h3>
-          <span className="text-gray-600">april 2020 – august 2024</span>
+      <article className="mb-8 border-l-2 border-gray-200 pl-4">
+        <div className="flex justify-between flex-wrap gap-1">
+          <h3 className="font-semibold text-base">Systemutvikler – ECIT WLCOM</h3>
+          <span className="text-sm text-gray-500">april 2020 – februar 2024</span>
         </div>
-        <p className="text-gray-700">Oslo, Norge</p>
+        <p className="text-sm text-gray-500 mb-3">Oslo, Norge</p>
 
-        <p className="mt-2">
-          Jeg hadde ansvar for mentorering av praksiselever og lærlinger. Det
-          ble besluttet at et rent CRUD‑API ga for mye frihet og for lite
-          kontroll over domenelogikken. Jeg deltok delvis i denne beslutningen.
-          Siden resten av teamet jobbet utelukkende i C#/.NET, ble det også
-          valgt å gå over til Blazor, som på dette tidspunktet ble sterkt
-          promotert av Microsoft.
+        <p className="text-gray-800 mb-3">
+          Sentral utvikler på et greenfield-system som erstattet to eksisterende
+          fagsystemer for transport- og logistikkbransjen. Eneste frontend-utvikler
+          gjennom hele prosjektet; alltid involvert på backend. Drev overgangen fra
+          et generisk CRUD-API til domenedrevet design med eksplisitte use-cases
+          (f.eks. <em>CreditInvoice</em>) for bedre kontroll over forretningslogikken.
+          Migrerte JavaScript-frontend til Blazor.
         </p>
 
-        <p className="mt-2">
-          Jeg jobbet mye med å kapsle inn «Use Cases» nærmere domenespråket, som
-          for eksempel
-          <em> CreditInvoice</em>. Jeg skrev om den JavaScript‑baserte
-          frontenden til Blazor mot det nye API-et for å støtte de nye
-          arbeidsflytene.
-        </p>
-
-        <p className="mt-2">
-          Systemet skulle erstatte to legacy‑systemer. Jeg var eneste utvikler
-          på frontend, og backend bestod av 1 til 3 utviklere avhengig av
-          periode, der jeg var alltid involvert.
-        </p>
-
-        <h4 className="font-medium mt-3">Backoffice‑systemet omfattet:</h4>
-        <ul className="list-disc ml-5">
-          <li>~100 skjermbilder for registrering av grunndata</li>
+        <ul className="list-disc ml-5 text-gray-800 space-y-1 mb-3">
+          <li>Backoffice med ~100 skjermbilder, salgsordreflyt og Visma-integrasjon</li>
+          <li>Daglig fakturering i millionklassen gjennom systemet</li>
+          <li>Tre separate portaler: kunder, sjåfører og leverandører</li>
+          <li>Azure AD-basert invitasjonsflyt for eksterne brukere</li>
           <li>
-            Flyter for opprettelse av salgsordre med fakturering via Visma
+            Pilotert hos konsern med over én milliard i omsetning; i produksjon i ~6 måneder
           </li>
-          <li>Flyter for transportordre/bulkordre → salgsordre → Visma</li>
-          <li>Invitering av eksterne brukere via Azure AD</li>
-          <li>Fakturering opp til millionbeløp daglig via systemet → Visma</li>
         </ul>
 
-        <h4 className="font-medium mt-3">Tre typer portaler:</h4>
-        <ul className="list-disc ml-5">
-          <li>Kundeportal: Oppdrag, rapporter, faktura, omsetning</li>
-          <li>
-            Sjåførportal: Oppdrag for både kundens og leverandørens sjåfører
-          </li>
-          <li>Leverandørportal: Oppdrag, rapporter, faktura, omsetning</li>
-        </ul>
-
-        <p className="mt-2">
-          Systemet ble deployet til Azure via Azure DevOps. Jeg deltok i
-          utrulling og pilotering hos et konsern med over én milliard i
-          omsetning. Systemet var i produksjon i rundt seks måneder før jeg
-          sluttet.
-        </p>
-
-        <h4 className="font-medium mt-3">Teknologier:</h4>
-        <p>
-          C#, ASP.NET Core, Angular, JavaScript, CSS, HTML, SQL Server, Azure
-          SQL, Azure DevOps, grunnleggende Azure, Syncfusion
-        </p>
+        <div className="mt-3">
+          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">Teknologier</span>
+          <p className="text-sm text-gray-600 mt-1">
+            C#, ASP.NET Core, Blazor, Angular, SQL Server, Azure SQL, Azure DevOps, Azure
+          </p>
+        </div>
       </article>
 
       {/* Apprentice */}
-      <article className="mb-8">
-        <div className="flex justify-between flex-wrap">
-          <h3 className="font-medium text-lg">Lærling – WLCOM / ECIT WLCOM</h3>
-          <span className="text-gray-600">mars 2018 – april 2020</span>
+      <article className="mb-8 border-l-2 border-gray-200 pl-4">
+        <div className="flex justify-between flex-wrap gap-1">
+          <h3 className="font-semibold text-base">Lærling – WLCOM / ECIT WLCOM</h3>
+          <span className="text-sm text-gray-500">mars 2018 – april 2020</span>
         </div>
-        <p className="text-gray-700">Oslo, Norge</p>
+        <p className="text-sm text-gray-500 mb-3">Oslo, Norge</p>
 
-        <p className="mt-2">
-          Jeg kom raskt i gang med reelle utviklingsoppgaver ettersom jeg
-          allerede hadde et solid grunnlag innen programmering. Min aller første
-          oppgave var å transformere XML‑fakturaer mottatt via EDI til PDF ved
-          hjelp av XSLT.
+        <p className="text-gray-800 mb-3">
+          Gikk raskt fra lærling til reell bidragsyter. Implementerte migrering
+          av to fagsystemer innen næringsmiddelindustri og anlegg til ny
+          datamodell og webbasert frontend. Utviklet API-er, klientbiblioteker
+          og frontend fra bunnen av, og leverte rundt 150 entiteter ved endt
+          læretid.
         </p>
 
-        <p className="mt-2">
-          Kort tid etter startet et større migreringsarbeid. Selskapet hadde to
-          tunge fagsystemer: ett for næringsmiddelindustrien og ett for
-          asfalt/pukk/vei. Min rolle var å skrive systemet på nytt med en ny
-          datamodell og en webbasert frontend (Angular). Beslutningen om
-          omskriving og datamodellering var ikke min, men jeg stod for
-          implementasjonen.
-        </p>
-
-        <p className="mt-2">
-          Jeg utviklet CRUD‑baserte HTTP‑API-er, klientbiblioteker for
-          konsumering av API-ene, samt en webfrontend. Arbeidet var i stor grad
-          R&D/proof‑of‑concept, men ved endt læretid var rundt 150 entiteter
-          implementert med tilhørende CRUD‑API-er.
-        </p>
-
-        <h4 className="font-medium mt-3">Teknologier:</h4>
-        <p>
-          C#, ASP.NET Core, Angular, JavaScript, CSS, HTML, SQL Server,
-          grunnleggende Azure, DevExpress
-        </p>
+        <div className="mt-3">
+          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">Teknologier</span>
+          <p className="text-sm text-gray-600 mt-1">
+            C#, ASP.NET Core, Angular, SQL Server, Azure
+          </p>
+        </div>
       </article>
 
-      {/* Security */}
-      <article className="mb-8">
-        <div className="flex justify-between flex-wrap">
-          <h3 className="font-medium text-lg">
-            Vekter og trafikkleder – Zone Security AS
-          </h3>
-          <span className="text-gray-600">mar. 2018 – nov. 2019</span>
-        </div>
-        <p className="text-gray-700">Oslo, Norge</p>
-
-        <ul className="list-disc ml-5 mt-2">
-          <li>Eventvekter og trafikkleder ved Telenor Arena</li>
-          <li>Ansvar for koordinering av ~30 ansatte</li>
-          <li>Samarbeid med politi og arrangør</li>
-        </ul>
-      </article>
     </section>
 
     {/* Education */}
     <section className="mb-10">
-      <h2 className="text-xl font-semibold mb-4">Utdanning</h2>
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-5">Utdanning</h2>
 
-      <article className="mb-4">
-        <div className="flex justify-between flex-wrap">
-          <h3 className="font-medium">Høyskolen Kristiania</h3>
-          <span className="text-gray-600">aug. 2021 – jun. 2024</span>
+      <article className="mb-3 flex justify-between flex-wrap gap-1">
+        <div>
+          <h3 className="font-semibold text-sm">Bachelor i programmering – Høyskolen Kristiania</h3>
         </div>
-        <p>Bachelor i programmering.</p>
+        <span className="text-sm text-gray-500">2021 – 2024</span>
       </article>
 
-      <article className="mb-4">
-        <div className="flex justify-between flex-wrap">
-          <h3 className="font-medium">Rælingen Videregående Skole</h3>
-          <span className="text-gray-600">aug. 2020 – jun. 2021</span>
+      <article className="mb-3 flex justify-between flex-wrap gap-1">
+        <div>
+          <h3 className="font-semibold text-sm">Fagbrev – IT-utvikler, ECIT WLCOM AS</h3>
         </div>
-        <p>Påbygg til generell studiekompetanse.</p>
-      </article>
-
-      <article className="mb-4">
-        <div className="flex justify-between flex-wrap">
-          <h3 className="font-medium">Sikkerhetsakademiet</h3>
-          <span className="text-gray-600">2017 – 2018</span>
-        </div>
-        <p>Tre kurs for å bli sertifisert vekter.</p>
-      </article>
-
-      <article className="mb-4">
-        <div className="flex justify-between flex-wrap">
-          <h3 className="font-medium">Jessheim Videregående Skole</h3>
-          <span className="text-gray-600">2016 – 2017</span>
-        </div>
-        <p>IKT – Servicefag.</p>
-      </article>
-
-      <article className="mb-4">
-        <div className="flex justify-between flex-wrap">
-          <h3 className="font-medium">Sørumsand Videregående Skole</h3>
-          <span className="text-gray-600">2015 – 2016</span>
-        </div>
-        <p>Medier og kommunikasjon.</p>
-      </article>
-
-      <article className="mb-4">
-        <div className="flex justify-between flex-wrap">
-          <h3 className="font-medium">Sørumsand Videregående Skole</h3>
-          <span className="text-gray-600">2014 – 2015</span>
-        </div>
-        <p>Teknikk og industriell produksjon.</p>
+        <span className="text-sm text-gray-500">2020</span>
       </article>
     </section>
 
-    {/* Certifications */}
+    {/* Skills */}
     <section className="mb-10">
-      <h2 className="text-xl font-semibold mb-4">Sertifiseringer</h2>
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-5">Kompetanse</h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <h3 className="text-sm font-semibold text-gray-700 mb-2">Kjernekompetanse</h3>
+          <ul className="text-sm text-gray-600 space-y-1">
+            <li>C# / .NET 8 / ASP.NET Core</li>
+            <li>Domenedrevet design (DDD)</li>
+            <li>Modernisering av legacy-systemer</li>
+            <li>API-design (REST, gRPC)</li>
+            <li>Azure / Bicep / IaC</li>
+            <li>SQL Server / Entity Framework</li>
+            <li>Teknisk gjeldshåndtering</li>
+            <li>Sikkerhetssoner og compliance</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-sm font-semibold text-gray-700 mb-2">Støttende ferdigheter</h3>
+          <ul className="text-sm text-gray-600 space-y-1">
+            <li>React / TypeScript / Blazor</li>
+            <li>WPF / WinUI / UWP</li>
+            <li>Azure DevOps / Jira / Confluence</li>
+            <li>Arkitekturdokumentasjon</li>
+            <li>Mentorering og teamledelse</li>
+            <li>Angular</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {/* Certifications – images only, no security cert */}
+    <section className="mb-10">
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-5">Attester & Fagbrev</h2>
 
       <article className="mb-6">
-        <h3 className="font-medium">Attest – ECIT WLCOM AS</h3>
+        <h3 className="text-sm font-semibold text-gray-700 mb-2">Attest – ECIT WLCOM AS</h3>
         <img
           src="/images/attest_ecit_wlcom.jpg"
-          className="mt-2 w-full max-w-md rounded border shadow-sm"
+          className="w-full max-w-md rounded border shadow-sm"
+          alt="Attest ECIT WLCOM"
         />
       </article>
 
       <article className="mb-6">
-        <h3 className="font-medium">Fagbrev – ECIT WLCOM AS</h3>
+        <h3 className="text-sm font-semibold text-gray-700 mb-2">Fagbrev – ECIT WLCOM AS</h3>
         <img
           src="/images/fagbrev_ecit_wlcom.jpg"
-          className="mt-2 w-full max-w-md rounded border shadow-sm"
-        />
-      </article>
-
-      <article className="mb-6">
-        <h3 className="font-medium">Attest – Zone Security AS</h3>
-        <img
-          src="/images/attest_zone_security.jpg"
-          className="mt-2 w-full max-w-md rounded border shadow-sm"
+          className="w-full max-w-md rounded border shadow-sm"
+          alt="Fagbrev ECIT WLCOM"
         />
       </article>
     </section>
   </div>
 ));
+
