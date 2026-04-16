@@ -251,6 +251,15 @@ export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
           alt="Fagbrev ECIT WLCOM"
         />
       </article>
+
+      <article className="mb-6">
+        <h3 className="text-sm font-semibold text-gray-700 mb-2">Attest – Zone Security AS</h3>
+        <img
+          src="/images/attest_zone_security.jpg"
+          className="w-full max-w-md rounded border shadow-sm"
+          alt="Attest Zone Security AS"
+        />
+      </article>
     </section>
   </div>
 ));
