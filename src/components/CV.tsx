@@ -65,23 +65,57 @@ export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
         <p className="text-gray-800 mb-3">
           Tar et strukturert tak på teknisk gjeld i systemkritiske løsninger:
           kartlegger risikofylte avhengigheter, utarbeider migrasjonsstrategier og
-          gjennomfører modernisering uten å forstyrre produksjonsdrift. Konkret
-          arbeid inkluderer refaktorering mot domenedrevet design, innføring av
-          tydelige API-grenser og fjerning av tykk-klient-til-database-mønstre.
-        </p>
-
-        <p className="text-gray-800 mb-3">
+          gjennomfører modernisering uten å forstyrre produksjonsdrift.
           Er fortsatt mye i koden selv, særlig på komplekse backend-oppgaver
           som krever dyp domeneforståelse og høye krav til ytelse, resiliens og
           sikkerhet. Fungerer som teknisk sparringspartner og holder teamet på
           rett kurs innen arkitektur, mønstre og kodekvalitet.
         </p>
 
+        <div className="mt-3 mb-3">
+          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">Nøkkelinitiativ</span>
+          <ul className="list-disc ml-5 text-gray-800 space-y-2 mt-2">
+            <li>
+              Tegnet systemdiagrammer som synliggjør avhengigheter på tvers av domener;
+              brukte disse som grunnlag for å kartlegge og prioritere teknisk gjeld
+            </li>
+            <li>
+              Planlagt og gjennomfører strategi for å nøste opp avhengigheter:
+              eliminere frontend-til-database-mønstre og migrere Windows-baserte
+              desktop-applikasjoner (WPF, UWP, WinUI) til webbaserte løsninger i Blazor
+            </li>
+            <li>
+              Migrerer Windows-avhengige tjenester til Azure og gjør dem cloud native
+            </li>
+            <li>
+              Migrasjon fra WCF til .NET 10, inkludert innføring av integrasjons-
+              og enhetstester, bytte av ORM fra ADO.NET til Entity Framework, og
+              oppsett av CI-pipelines i Azure DevOps for å sikre at <em>main</em> alltid er produksjonssikkert
+            </li>
+            <li>
+              Nøstet opp i delte databaser på tvers av systemer: kartlagt tjenester med
+              databasetilknytning, provisjonert dedikerte brukere per tjeneste, satt opp
+              tracing og kjørt spørringer for å kartlegge databruk, identifisert
+              foreign key-avhengigheter på tvers av systemer og migrert databaser til
+              respektive systemer
+            </li>
+            <li>
+              Oversetter forretningskrav til funksjonell programvare og sikrer at
+              tekniske valg er forankret i faktisk forretningsverdi
+            </li>
+            <li>
+              Mentorerer lærlinger og praksiselever tett: delegerer reelle oppgaver,
+              følger opp faglig utvikling og sørger for at de blir fullverdige
+              bidragsytere i teamet
+            </li>
+          </ul>
+        </div>
+
         <div className="mt-3">
           <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">Teknologier</span>
           <p className="text-sm text-gray-600 mt-1">
-            C#, ASP.NET Core, .NET Framework, React, SQL Server, Azure, Azure DevOps,
-            Bicep, gRPC, WinUI, WPF, Jira, Confluence
+            C#, ASP.NET Core, .NET 10, .NET Framework, Blazor, SQL Server, Azure,
+            Azure DevOps, Bicep, gRPC, Entity Framework, WinUI, WPF, Jira, Confluence
           </p>
         </div>
       </article>
