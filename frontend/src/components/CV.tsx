@@ -18,8 +18,7 @@ export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
       <p className="text-gray-800 leading-relaxed">
         Senior systemutvikler med 8 års erfaring fra forretningskritiske systemer
         i regulerte bransjer, og Tech Lead-rolle hos Apotek 1.
-        Spesialisert på modernisering av legacy-arkitektur, domenedrevet design
-        og API-utvikling i .NET. Jobber mye med kode, eier teknisk retning og
+        Spesialisert på modernisering av legacy-arkitektur og API-utvikling i .NET. Jobber mye med kode, eier teknisk retning og
         sørger for at leveranser er forankret i forretningsmål, sikkerhetsmål og
         referansearkitektur. Systemene er forretningskritiske og krever høy SLA
         for å sikre drift av hele Apotek 1-kjeden.
@@ -170,12 +169,11 @@ export const CV = React.forwardRef<HTMLDivElement>((_, ref) => (
         </p>
 
         <ul className="list-disc ml-5 text-gray-800 space-y-1 mb-3">
-          <li>Backoffice med ~100 skjermbilder, salgsordreflyt og Visma-integrasjon</li>
-          <li>Daglig fakturering i millionklassen gjennom systemet</li>
+          <li>Backoffice med ~100 skjermbilder, ordreflyter og Visma-integrasjon</li>
           <li>Tre separate portaler: kunder, sjåfører og leverandører</li>
           <li>Azure AD-basert invitasjonsflyt for eksterne brukere</li>
           <li>
-            Pilotert hos konsern med over én milliard i omsetning; i produksjon i ~6 måneder
+            Pilotert hos konsern; i produksjon i ~8 måneder under mitt opphold
           </li>
         </ul>
 
