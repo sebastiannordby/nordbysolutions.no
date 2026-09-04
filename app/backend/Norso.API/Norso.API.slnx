@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../Norso.API.Tests.Integration/Norso.API.Tests.Integration.csproj" Id="67de3758-574e-4de3-9fb5-7331dd7830dc" />
+  <Project Path="Norso.API.csproj" />
+</Solution>

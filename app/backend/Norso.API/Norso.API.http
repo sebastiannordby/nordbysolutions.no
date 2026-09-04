@@ -1,0 +1,6 @@
+@Norso.API_HostAddress = http://localhost:5030
+
+GET {{Norso.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

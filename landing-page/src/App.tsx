@@ -39,10 +39,12 @@ const App = () => {
             {darkMode ? 'Lys' : 'Mørk'}
           </button>
           <a
-            href="mailto:post@norso.no"
+            href="https://app.norso.no"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-3 py-1.5 text-xs font-semibold rounded-md bg-[#238636] text-white hover:bg-[#2ea043] transition-colors"
           >
-            Ta kontakt
+            Open app
           </a>
         </div>
 
@@ -118,7 +120,7 @@ const App = () => {
               Porteføljen spenner over kommersielle domener (kampanjeplanlegging, vareforsyning,
               butikkstøtte) og operasjonelle systemer (lagerstyring, logistikk,
               medisinproduksjon). Systemene er segmentert i sikkerhetssoner med strenge krav til
-              logging, sporbarhet og dataflyt regulert av pasientvern og legemiddellovgivning.
+              logging, sporbarhet og dataflyt regulert av av diverse lovgivning.
             </p>
             <p className="mb-3 text-gray-700 dark:text-[#c9d1d9]">
               Definerer arkitekturretning, avveier ny funksjonalitet mot teknisk gjeld og
