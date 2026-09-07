@@ -1,0 +1,146 @@
+import type { Place } from '@/types';
+
+export const places: Place[] = [
+  {
+    id: 'bjorkelia',
+    name: 'Bjørkelia besøksgård',
+    category: 'petZoo',
+    categoryLabel: 'Besøksgård',
+    municipality: 'Andebu',
+    distanceKm: 3.2,
+    openLabel: 'Åpent til 17',
+    isOpenNow: true,
+    shortNote: 'Stellerom · parkering',
+    description:
+      'Liten gård med sauer, geiter og høner. Barn kan være med på fôring klokka 12 og 15. Kafeen serverer vafler og kaffe, og gårdsbutikken har egg, ull og syltetøy. Alt kan betales med Vipps.',
+    facts: [
+      { label: 'Åpent', value: 'I dag 10–17 · lørdag 10–16 · søndag stengt' },
+      { label: 'Sesong', value: 'Hele året, fôring kl. 12 og 15' },
+      { label: 'Praktisk', value: 'Stellerom · toalett · gratis parkering · Vipps' },
+      { label: 'Barn', value: 'Egner seg for de minste, går fint med vogn' },
+      { label: 'Hund', value: 'Bånd, ikke inne i fjøset' },
+    ],
+    facilities: ['changingTable', 'toilet', 'parking', 'vipps', 'strollerFriendly'],
+    hearts: 42,
+    tips: [
+      {
+        id: 'bjorkelia-1',
+        text: 'Kom rett før fôringa klokka 12, da er alle dyra ute. Vaflene tar slutt tidlig på søndager.',
+        author: 'Marte, Stokke',
+      },
+      {
+        id: 'bjorkelia-2',
+        text: 'Fin liten sti bak fjøset ned til vannet. Tar et kvarter med små barn.',
+        author: 'Jonas, Tønsberg',
+      },
+    ],
+    point: { x: 0.246, y: 0.375 },
+    pinColor: '#5E7B4F',
+  },
+  {
+    id: 'sandnes',
+    name: 'Sandnes gårdsutsalg',
+    category: 'farmShop',
+    categoryLabel: 'Gårdsbutikk',
+    municipality: 'Andebu',
+    distanceKm: 5.8,
+    openLabel: 'Åpent til 18',
+    isOpenNow: true,
+    shortNote: 'Egg, epler, honning',
+    description:
+      'Ubetjent utsalg i det gamle stabburet. Egg, poteter, epler i sesong og honning fra gårdens egne kuber. Betaling med Vipps.',
+    facts: [
+      { label: 'Åpent', value: 'Alle dager 08–18' },
+      { label: 'Sesong', value: 'Epler fra september, honning hele året' },
+      { label: 'Praktisk', value: 'Parkering · ubetjent · Vipps' },
+    ],
+    facilities: ['parking', 'vipps'],
+    hearts: 28,
+    tips: [
+      {
+        id: 'sandnes-1',
+        text: 'Kom tidlig på lørdag hvis du vil ha egg, de går fort.',
+        author: 'Kari, Sandefjord',
+      },
+    ],
+    point: { x: 0.605, y: 0.312 },
+    pinColor: '#C2643B',
+  },
+  {
+    id: 'vevstua',
+    name: 'Vevstua på Vollen',
+    category: 'handmade',
+    categoryLabel: 'Håndlaget',
+    municipality: 'Re',
+    distanceKm: 7.1,
+    openLabel: 'Åpner 11 i morgen',
+    isOpenNow: false,
+    shortNote: 'Ull og vev',
+    description:
+      'Verksted i den gamle skolestua. Vevde løpere, puter og pledd av lokal ull. Barn får prøve veven, og det er strikkekafé på torsdager.',
+    facts: [
+      { label: 'Åpent', value: 'Tor–søn 11–16' },
+      { label: 'Sesong', value: 'Hele året' },
+      { label: 'Praktisk', value: 'Toalett · parkering · Vipps' },
+      { label: 'Barn', value: 'Barn får prøve veven' },
+    ],
+    facilities: ['toilet', 'parking', 'vipps'],
+    hearts: 19,
+    tips: [],
+    point: { x: 0.436, y: 0.495 },
+    pinColor: '#5E7B4F',
+  },
+  {
+    id: 'kleivane',
+    name: 'Kleivane blomsterhage',
+    category: 'pickYourOwn',
+    categoryLabel: 'Selvplukk',
+    municipality: 'Stokke',
+    distanceKm: 9.4,
+    openLabel: 'Åpent til 20',
+    isOpenNow: true,
+    shortNote: 'Dahlia, ta med saks',
+    description:
+      'Selvplukk av dahlia, sinnia og georginer. Ta med saks og et spann. Benker i hagen, og lite folk på formiddagen.',
+    facts: [
+      { label: 'Åpent', value: 'Alle dager 10–20' },
+      { label: 'Sesong', value: 'Juli–oktober' },
+      { label: 'Praktisk', value: 'Parkering · Vipps · benker' },
+    ],
+    facilities: ['parking', 'vipps'],
+    hearts: 63,
+    tips: [
+      {
+        id: 'kleivane-1',
+        text: 'Formiddag midt i uka er nesten tomt. Ta med avispapir til blomstene.',
+        author: 'Ingrid, Sandefjord',
+      },
+    ],
+    point: { x: 0.749, y: 0.445 },
+    pinColor: '#C2643B',
+  },
+  {
+    id: 'fjellheim',
+    name: 'Fjellheim loppemarked',
+    category: 'fleaMarket',
+    categoryLabel: 'Arrangement',
+    municipality: 'Re',
+    distanceKm: 11,
+    openLabel: 'Lørdag 10–15',
+    isOpenNow: false,
+    shortNote: 'Kaffe og vafler',
+    description:
+      'Loppemarked i grendehuset til inntekt for korpset. Rundt 20 lokale produsenter og boder med brukt utstyr, bøker og planter.',
+    facts: [
+      { label: 'Åpent', value: 'Lørdag 12. september 10–15' },
+      { label: 'Praktisk', value: 'Kontant og Vipps · toalett · parkering' },
+    ],
+    facilities: ['toilet', 'parking', 'vipps'],
+    hearts: 11,
+    tips: [],
+    point: { x: 0.154, y: 0.565 },
+    pinColor: '#5E7B4F',
+  },
+];
+
+export const placeById = Object.fromEntries(places.map((p) => [p.id, p])) as Record<string, Place>;

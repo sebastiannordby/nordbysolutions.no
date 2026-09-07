@@ -1,0 +1,26 @@
+.tabbar {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  padding: 8px 8px calc(var(--safe-bottom) + 26px);
+  background: rgba(247, 242, 233, 0.96);
+  border-top: 1px solid var(--ink-hairline);
+  backdrop-filter: blur(8px);
+}
+
+.tabbar__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 0;
+  font-size: 10.5px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--ink-tertiary);
+}
+
+.tabbar__item--active {
+  color: var(--ink);
+}

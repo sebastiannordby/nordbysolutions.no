@@ -1,0 +1,40 @@
+.toggle-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+  border-top: 1px solid rgba(34, 48, 31, 0.07);
+  font-size: 14.5px;
+}
+
+.toggle-row:first-child {
+  border-top: none;
+}
+
+.toggle-track {
+  flex: none;
+  width: 44px;
+  height: 26px;
+  padding: 3px;
+  border-radius: var(--r-pill);
+  background: rgba(34, 48, 31, 0.18);
+  transition: background 0.15s ease;
+}
+
+.toggle-track--on {
+  background: var(--moss);
+}
+
+.toggle-knob {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--r-pill);
+  background: var(--card);
+  transition: margin 0.15s ease;
+}
+
+.toggle-track--on .toggle-knob {
+  margin-left: 18px;
+}

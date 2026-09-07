@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+a {
+  color: var(--terracotta);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--ink);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+p {
+  margin: 0;
+}
+
+/* Shared primitives */
+.screen {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screen--map {
+  overflow: hidden;
+}
+
+.screen__top {
+  padding-top: calc(var(--safe-top) + 20px);
+}
+
+.screen__title {
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.screen__subtitle {
+  margin-top: 4px;
+  font-size: 13.5px;
+  color: var(--ink-secondary);
+}
+
+.section {
+  padding: 22px var(--gutter) 0;
+}
+
+.section__heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-family: var(--font-display);
+  font-size: 19px;
+}
+
+.link-button {
+  font-family: var(--font-ui);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--terracotta);
+}
+
+.button-primary {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: var(--r-lg);
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.button-accent {
+  display: block;
+  width: 100%;
+  padding: 13px 0;
+  border-radius: var(--r-md);
+  background: var(--terracotta);
+  color: var(--card);
+  font-size: 14.5px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.badge-open {
+  padding: 3px 8px;
+  border-radius: var(--r-pill);
+  background: var(--moss-pale);
+  color: var(--moss-deep);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.badge-neutral {
+  padding: 3px 8px;
+  border-radius: var(--r-pill);
+  background: rgba(34, 48, 31, 0.06);
+  color: var(--ink-secondary);
+  font-size: 11px;
+}
+
+.photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--photo-placeholder);
+  color: var(--ink-tertiary);
+  font-size: 9px;
+}
+
+.bottom-fade {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 14px var(--gutter) calc(var(--safe-bottom) + 34px);
+  background: linear-gradient(rgba(247, 242, 233, 0), var(--paper) 40%);
+}
+
+.tabbar-spacer {
+  height: calc(var(--tabbar-height) + 28px);
+}

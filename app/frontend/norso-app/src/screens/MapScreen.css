@@ -1,0 +1,179 @@
+.map-header {
+  position: absolute;
+  inset: calc(var(--safe-top) + 20px) 16px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 2;
+}
+
+.map-search {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  background: var(--card);
+  box-shadow: var(--shadow-raised);
+}
+
+.map-search__placeholder {
+  font-size: 15px;
+  color: var(--ink-secondary);
+}
+
+.map-search__filter {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--terracotta);
+}
+
+.map-chips {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.map-chips::-webkit-scrollbar {
+  display: none;
+}
+
+.map-pin {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--card);
+  border-radius: var(--r-pill);
+  transform: translate(-50%, -50%);
+  box-shadow: var(--shadow-pin);
+  transition: width 0.18s ease, height 0.18s ease, box-shadow 0.18s ease;
+}
+
+.map-pin--active {
+  width: 38px;
+  height: 38px;
+  box-shadow: var(--shadow-pin-active);
+}
+
+.map-pin__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--r-pill);
+  background: rgba(255, 253, 248, 0.9);
+}
+
+.map-sheet {
+  position: absolute;
+  inset: auto 0 var(--tabbar-height);
+  padding: 10px 0 12px;
+  border-radius: var(--r-sheet) var(--r-sheet) 0 0;
+  background: var(--card);
+  box-shadow: var(--shadow-sheet);
+  z-index: 3;
+}
+
+.screen--map .maplibregl-ctrl-top-right {
+  top: calc(var(--safe-top) + 118px);
+  right: 10px;
+}
+
+.screen--map .maplibregl-ctrl {
+  box-shadow: var(--shadow-raised);
+}
+
+.map-sheet__grabber {
+  width: 38px;
+  height: 4px;
+  margin: 0 auto 12px;
+  border-radius: 4px;
+  background: rgba(34, 48, 31, 0.18);
+}
+
+.map-sheet__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 var(--gutter) 8px;
+}
+
+.map-sheet__count {
+  font-size: 12px;
+  color: var(--ink-secondary);
+}
+
+.place-card {
+  display: flex;
+  gap: 12px;
+  width: calc(100% - var(--gutter) * 2);
+  margin: 0 var(--gutter) 12px;
+  padding: 12px;
+  border-radius: var(--r-lg);
+  background: var(--card-sunk);
+}
+
+.place-card__photo {
+  flex: none;
+  width: 66px;
+  height: 66px;
+  border-radius: 12px;
+}
+
+.place-card__name {
+  font-family: var(--font-display);
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+.place-card__meta {
+  margin-top: 3px;
+  font-size: 12.5px;
+  color: var(--ink-secondary);
+}
+
+.place-card__tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 7px;
+  font-size: 11.5px;
+  color: var(--ink-secondary);
+}
+
+.place-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px var(--gutter);
+  border-top: 1px solid var(--ink-hairline);
+}
+
+.place-row__photo {
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--r-sm);
+  background: #e9e3d4;
+}
+
+.place-row__name {
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.place-row__meta {
+  font-size: 12px;
+  color: var(--ink-secondary);
+}
+
+.place-row__dist {
+  flex: none;
+  font-size: 12px;
+  color: var(--ink-secondary);
+}

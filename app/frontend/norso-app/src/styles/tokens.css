@@ -1,0 +1,56 @@
+:root {
+  /* Ink */
+  --ink: #22301f;
+  --ink-secondary: rgba(34, 48, 31, 0.7);
+  --ink-tertiary: rgba(34, 48, 31, 0.72);
+  --ink-hairline: rgba(34, 48, 31, 0.08);
+  --ink-border: rgba(34, 48, 31, 0.12);
+
+  /* Surfaces */
+  --paper: #f7f2e9;
+  --card: #fffdf8;
+  --card-sunk: #f4efe2;
+  --paper-on-dark: rgba(247, 242, 233, 0.84);
+
+  /* Accents */
+  --terracotta: #c2643b;
+  --moss: #5e7b4f;
+  --moss-deep: #3f6b3a;
+  --moss-pale: #dde9d4;
+
+  /* Map palette */
+  --map-land: #e7e2d4;
+  --map-water: #c7d8dc;
+  --map-field: #d6dfc8;
+  --map-field-light: #dde4cf;
+  --map-road: #f2ede1;
+
+  /* Placeholder blocks */
+  --photo-placeholder: #dde4cf;
+  --photo-placeholder-alt: #e4e0d0;
+
+  /* Type */
+  --font-display: 'Newsreader', Georgia, serif;
+  --font-ui: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+
+  /* Radii */
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 16px;
+  --r-xl: 20px;
+  --r-sheet: 24px;
+  --r-pill: 999px;
+
+  /* Elevation */
+  --shadow-card: 0 2px 10px rgba(34, 48, 31, 0.08);
+  --shadow-raised: 0 6px 18px rgba(34, 48, 31, 0.14);
+  --shadow-sheet: 0 -10px 30px rgba(34, 48, 31, 0.16);
+  --shadow-pin: 0 3px 8px rgba(34, 48, 31, 0.24);
+  --shadow-pin-active: 0 8px 20px rgba(34, 48, 31, 0.4);
+
+  /* Layout */
+  --gutter: 18px;
+  --tabbar-height: 82px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
