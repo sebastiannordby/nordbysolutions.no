@@ -21,8 +21,13 @@ export default function App() {
       {app.screen === 'map' && (
         <MapScreen
           selectedPlace={app.selectedPlace}
+          places={app.places}
           visiblePlaces={app.visiblePlaces}
           radiusKm={app.filters.radiusKm}
+          query={app.filters.query}
+          onQueryChange={(query) => app.patchFilters({ query })}
+          searchLocation={app.searchLocation}
+          onSelectSearchLocation={app.selectSearchLocation}
           quickCategory={app.quickCategory}
           onQuickCategory={app.setQuickCategory}
           onSelectPlace={app.setSelectedPlaceId}

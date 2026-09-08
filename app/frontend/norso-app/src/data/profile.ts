@@ -1,8 +1,8 @@
 import type { NewPlaceDraft } from '@/types';
 
 export const currentUser = {
-  name: 'Ingrid Nordbø',
-  municipality: 'Sandefjord',
+  name: 'Sebastian Nordby',
+  municipality: 'Sørumsand',
   memberSince: 2025,
   publishedPlaces: 1,
   notificationSetting: 'Nytt i nærheten',

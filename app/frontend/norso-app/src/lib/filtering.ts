@@ -3,7 +3,7 @@ import type { Filters, Place } from '@/types';
 export const defaultFilters: Filters = {
   query: '',
   categories: [],
-  radiusKm: 10,
+  radiusKm: 25,
   openNow: false,
   changingTable: false,
   parking: false,
@@ -12,16 +12,21 @@ export const defaultFilters: Filters = {
 
 export function filterPlaces(places: Place[], filters: Filters): Place[] {
   const q = filters.query.trim().toLowerCase();
-  return places.filter((place) => {
-    if (q && !place.name.toLowerCase().includes(q)) return false;
-    if (place.distanceKm > filters.radiusKm) return false;
-    if (filters.categories.length && !filters.categories.includes(place.category)) return false;
-    if (filters.openNow && !place.isOpenNow) return false;
-    if (filters.changingTable && !place.facilities.includes('changingTable')) return false;
-    if (filters.parking && !place.facilities.includes('parking')) return false;
-    if (filters.vipps && !place.facilities.includes('vipps')) return false;
-    return true;
-  });
+  return places
+    .filter((place) => {
+      const searchableText = [place.name, place.municipality, place.categoryLabel, place.shortNote]
+        .join(' ')
+        .toLowerCase();
+      if (q && !searchableText.includes(q)) return false;
+      if (place.distanceKm > filters.radiusKm) return false;
+      if (filters.categories.length && !filters.categories.includes(place.category)) return false;
+      if (filters.openNow && !place.isOpenNow) return false;
+      if (filters.changingTable && !place.facilities.includes('changingTable')) return false;
+      if (filters.parking && !place.facilities.includes('parking')) return false;
+      if (filters.vipps && !place.facilities.includes('vipps')) return false;
+      return true;
+    })
+    .sort((a, b) => a.distanceKm - b.distanceKm);
 }
 
 export function toggleInArray<T>(arr: T[], value: T): T[] {

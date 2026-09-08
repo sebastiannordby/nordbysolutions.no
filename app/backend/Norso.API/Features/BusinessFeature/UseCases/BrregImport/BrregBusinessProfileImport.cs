@@ -1,4 +1,5 @@
-﻿using Norso.API.Features.BusinessFeature.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Norso.API.Features.BusinessFeature.Models;
 
 namespace Norso.API.Features.BusinessFeature.UseCases.BrregImport
 {
@@ -13,9 +14,14 @@ namespace Norso.API.Features.BusinessFeature.UseCases.BrregImport
         {
             var industrialCodes = IndustrialCodesToImport.Select(x => x.Code).ToHashSet();
             var importedCount = 0;
+            var updatedCount = 0;
             var processedCount = 0;
 
             logger.LogDebug("Starting import of business profiles from Brreg with {Count} industrial codes.", industrialCodes.Count);
+
+            var existingBusinessProfiles = await context.BusinessProfiles
+                .Where(x => x.OrganizationNumber != null)
+                .ToDictionaryAsync(x => x.OrganizationNumber!, x => x, cancellationToken);
 
             await foreach (var unit in await breegOrganizationalUnitProvider.GetAsync(cancellationToken))
             {
@@ -26,19 +32,34 @@ namespace Norso.API.Features.BusinessFeature.UseCases.BrregImport
                     || (unit.naeringskode2 is not null && industrialCodes.Contains(unit.naeringskode2.kode))
                     || (unit.naeringskode3 is not null && industrialCodes.Contains(unit.naeringskode3.kode)))
                 {
-                    var businessProfile = new BusinessProfile
+                    if (existingBusinessProfiles.TryGetValue(unit.organisasjonsnummer, out var existingProfile))
                     {
-                        OrganizationNumber = unit.organisasjonsnummer,
-                        Name = unit.navn,
-                        EmailAddress = unit.epostadresse,
-                        PhoneNumber = unit.telefon,
-                        AddressLine = unit.forretningsadresse?.adresse?.FirstOrDefault(),
-                        PostalCode = unit.forretningsadresse?.postnummer,
-                        PostalPlace = unit.forretningsadresse?.poststed,
-                        Country = unit.forretningsadresse?.land,
-                    };
-                    context.BusinessProfiles.Add(businessProfile);
-                    importedCount++;
+                        updatedCount++;
+
+                        var description = string.Join(" ", unit.aktivitet ?? []);
+                        if (description.Length > 1000)
+                            description = description.Substring(0, 999);
+
+                        existingProfile.Description = description;
+                        context.BusinessProfiles.Update(existingProfile);
+                    }
+                    else
+                    {
+                        var businessProfile = new BusinessProfile
+                        {
+                            OrganizationNumber = unit.organisasjonsnummer,
+                            Name = unit.navn,
+                            EmailAddress = unit.epostadresse,
+                            PhoneNumber = unit.telefon,
+                            AddressLine = unit.forretningsadresse?.adresse?.FirstOrDefault(),
+                            PostalCode = unit.forretningsadresse?.postnummer,
+                            PostalPlace = unit.forretningsadresse?.poststed,
+                            Country = unit.forretningsadresse?.land,
+                        };
+                        context.BusinessProfiles.Add(businessProfile);
+                        importedCount++;
+                    }
+
 
                     if (importedCount % BatchSize == 0)
                     {

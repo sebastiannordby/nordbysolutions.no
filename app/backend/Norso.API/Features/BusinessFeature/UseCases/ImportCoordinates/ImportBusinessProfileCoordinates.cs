@@ -11,6 +11,8 @@ public class ImportBusinessProfileCoordinates(
     {
         var businessesWithoutCoordinated = await context.BusinessProfiles
             .Where(b => b.Latitude == null || b.Longitude == null)
+            .Where(x => !string.IsNullOrWhiteSpace(x.AddressLine))
+            .Where(x => !x.AddressLine!.StartsWith("c/o"))
             .ToArrayAsync(cancellationToken);
 
         foreach (var business in businessesWithoutCoordinated)
@@ -33,7 +35,7 @@ public class ImportBusinessProfileCoordinates(
                     logger.LogInformation("Updated coordinates for business {OrganizationNumber}: ({Lat}, {Lon})", business.OrganizationNumber, point.Lat, point.Lon);
                 }
 
-                await Task.Delay(200, cancellationToken); // Delay to avoid hitting rate limits
+                //await Task.Delay(50, cancellationToken); // Delay to avoid hitting rate limits
             }
             catch (Exception ex)
             {

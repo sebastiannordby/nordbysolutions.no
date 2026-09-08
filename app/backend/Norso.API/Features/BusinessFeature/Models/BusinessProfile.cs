@@ -13,5 +13,6 @@
         public string? PostalPlace { get; set; }
         public double? Longitude { get; set; }
         public double? Latitude { get; set; }
+        public string? Description { get; internal set; }
     }
 }

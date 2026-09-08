@@ -33,6 +33,12 @@ export interface MapPoint {
   y: number;
 }
 
+export interface SearchLocation {
+  label: string;
+  longitude: number;
+  latitude: number;
+}
+
 export interface Place {
   id: string;
   name: string;

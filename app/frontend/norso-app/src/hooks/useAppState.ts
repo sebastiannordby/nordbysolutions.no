@@ -4,7 +4,7 @@ import { mapBusinessProfilesToPlaces } from '@/api/mappers/businessProfileMapper
 import { calendarDays } from '@/data/events';
 import { savedPlaceIds } from '@/data/profile';
 import { defaultFilters, filterPlaces } from '@/lib/filtering';
-import type { Filters, Language, Place, Screen } from '@/types';
+import type { CategoryId, Filters, Language, Place, Screen, SearchLocation } from '@/types';
 
 const DEFAULT_USER_LOCATION: { latitude: number; longitude: number } = {
   latitude: 59.1333,
@@ -21,6 +21,7 @@ export function useAppState() {
   const [hearted, setHearted] = useState<string[]>(savedPlaceIds);
   const [language, setLanguage] = useState<Language>('nb');
   const [userLocation, setUserLocation] = useState<{ latitude: number; longitude: number } | null>(null);
+  const [searchLocation, setSearchLocation] = useState<SearchLocation | null>(null);
 
   useEffect(() => {
     if (!navigator.geolocation) {
@@ -48,8 +49,9 @@ export function useAppState() {
   }, []);
 
   useEffect(() => {
-    if (!userLocation) return;
-    const currentLocation = userLocation;
+    const loadLocation = searchLocation ?? userLocation;
+    if (!loadLocation) return;
+    const currentLocation = loadLocation;
 
     let isCancelled = false;
 
@@ -74,7 +76,7 @@ export function useAppState() {
     return () => {
       isCancelled = true;
     };
-  }, [filters.radiusKm, userLocation]);
+  }, [filters.radiusKm, searchLocation, userLocation]);
 
   useEffect(() => {
     if (places.length === 0) {
@@ -92,7 +94,10 @@ export function useAppState() {
     [places, selectedPlaceId],
   );
 
-  const visiblePlaces = useMemo(() => filterPlaces(places, filters), [places, filters]);
+  const visiblePlaces = useMemo(() => {
+    const activeFilters = searchLocation ? { ...filters, query: '' } : filters;
+    return filterPlaces(places, activeFilters);
+  }, [filters, places, searchLocation]);
 
   const openPlace = useCallback((id: string) => {
     setSelectedPlaceId(id);
@@ -107,6 +112,21 @@ export function useAppState() {
     setFilters((prev) => ({ ...prev, ...patch }));
   }, []);
 
+  const selectSearchLocation = useCallback((location: SearchLocation | null) => {
+    setSearchLocation(location);
+    if (location) {
+      setFilters((prev) => ({ ...prev, query: location.label }));
+    }
+  }, []);
+
+  const applyQuickCategory = useCallback((category: string) => {
+    setQuickCategory(category);
+    setFilters((prev) => ({
+      ...prev,
+      categories: category === 'all' ? [] : [category as CategoryId],
+    }));
+  }, []);
+
   return {
     screen,
     setScreen,
@@ -114,9 +134,11 @@ export function useAppState() {
     setSelectedPlaceId,
     openPlace,
     quickCategory,
-    setQuickCategory,
+    setQuickCategory: applyQuickCategory,
     filters,
     patchFilters,
+    searchLocation,
+    selectSearchLocation,
     places,
     visiblePlaces,
     selectedDate,
