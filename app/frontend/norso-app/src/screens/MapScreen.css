@@ -181,6 +181,85 @@
   box-shadow: 0 0 0 8px rgba(194, 100, 59, 0.18), var(--shadow-pin-active);
 }
 
+.map-selected-card {
+  position: absolute;
+  right: 14px;
+  bottom: calc(var(--map-bottom-inset, var(--tabbar-height)) + 12px);
+  left: 14px;
+  z-index: 3;
+  display: flex;
+  border-radius: var(--r-lg);
+  background: var(--card);
+  box-shadow: var(--shadow-raised);
+}
+
+.map-selected-card__body {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 46px 12px 13px;
+  text-align: left;
+}
+
+.map-selected-card__pin {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border: 3px solid var(--card-sunk);
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow-pin);
+}
+
+.map-selected-card__content {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.map-selected-card__name,
+.map-selected-card__meta,
+.map-selected-card__note {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.map-selected-card__name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.15;
+}
+
+.map-selected-card__meta {
+  font-size: 12px;
+  color: var(--ink-secondary);
+}
+
+.map-selected-card__note {
+  font-size: 12px;
+  color: var(--ink-secondary);
+}
+
+.map-selected-card__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: var(--r-pill);
+  background: var(--card-sunk);
+  color: var(--ink-secondary);
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .map-sheet {
   position: absolute;
   inset: auto 0 var(--tabbar-height);

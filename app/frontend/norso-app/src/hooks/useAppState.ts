@@ -79,18 +79,13 @@ export function useAppState() {
   }, [filters.radiusKm, searchLocation, userLocation]);
 
   useEffect(() => {
-    if (places.length === 0) {
-      if (selectedPlaceId) setSelectedPlaceId('');
-      return;
-    }
-
-    if (!selectedPlaceId || !places.some((p) => p.id === selectedPlaceId)) {
-      setSelectedPlaceId(places[0].id);
+    if (selectedPlaceId && !places.some((p) => p.id === selectedPlaceId)) {
+      setSelectedPlaceId('');
     }
   }, [places, selectedPlaceId]);
 
   const selectedPlace = useMemo<Place | null>(
-    () => places.find((p) => p.id === selectedPlaceId) ?? places[0] ?? null,
+    () => places.find((p) => p.id === selectedPlaceId) ?? null,
     [places, selectedPlaceId],
   );
 

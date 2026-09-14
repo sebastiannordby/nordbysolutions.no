@@ -54,6 +54,7 @@ export function MapCanvas({
   const onLongPressLocationRef = useRef(onLongPressLocation);
   const longPressTimerRef = useRef<number | undefined>(undefined);
   const longPressPointRef = useRef<[number, number] | null>(null);
+  const centeredSelectedPlaceIdRef = useRef<string>('');
 
   useEffect(() => {
     onLongPressLocationRef.current = onLongPressLocation;
@@ -286,10 +287,16 @@ export function MapCanvas({
     if (!map) return;
 
     if (searchLocation) return;
+    if (!selectedPlaceId) {
+      centeredSelectedPlaceIdRef.current = '';
+      return;
+    }
+    if (centeredSelectedPlaceIdRef.current === selectedPlaceId) return;
 
     const selected = places.find((p) => p.id === selectedPlaceId);
     if (!selected) return;
 
+    centeredSelectedPlaceIdRef.current = selectedPlaceId;
     map.easeTo({ center: placeToLngLat(selected), duration: 500 });
   }, [places, searchLocation, selectedPlaceId]);
 
