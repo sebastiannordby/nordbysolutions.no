@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Norso.API.Features;
 using Norso.API.Features.BusinessFeature.UseCases.BrregImport;
 using Norso.API.Features.BusinessFeature.UseCases.ImportCoordinates;
 
@@ -49,4 +51,25 @@ public class DataController(
         }, hostApplicationLifetime.ApplicationStopping);
         return Accepted();
     }
+
+    [HttpPost("MigrateToPostgres")]
+    public IActionResult MigrateToPostgres()
+    {
+        _ = Task.Run(async () =>
+        {
+            using var scope = serviceScopeFactory.CreateScope();
+            var oldContext = scope.ServiceProvider.GetRequiredService<MssqlVrimleContext>();
+            var newContext = scope.ServiceProvider.GetRequiredService<VrimleContext>();
+
+            var businessProfiles = await oldContext.BusinessProfiles.ToArrayAsync();
+
+            logger.LogInformation("Migrating number of business profiles: {Number}", businessProfiles.Length);
+            newContext.BusinessProfiles.AddRange(businessProfiles);
+            await newContext.SaveChangesAsync();
+            logger.LogInformation("Business profiles now available inside postgres.");
+        });
+
+        return Accepted();
+    }
+
 }

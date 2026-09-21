@@ -41,6 +41,18 @@ builder.Services.AddDbContext<VrimleContext>(options =>
     options.UseNpgsql(connectionString);
 });
 
+builder.Services.AddDbContext<MssqlVrimleContext>(options =>
+{
+    var connectionString = builder.Configuration["Secrets:DbConnectionString"];
+
+    if (string.IsNullOrWhiteSpace(connectionString))
+    {
+        throw new InvalidOperationException("Database connection string is not configured.");
+    }
+
+    options.UseSqlServer(connectionString);
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

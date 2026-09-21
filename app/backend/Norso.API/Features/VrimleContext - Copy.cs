@@ -3,13 +3,13 @@ using Norso.API.Features.BusinessFeature.Models;
 
 namespace Norso.API.Features
 {
-    public class VrimleContext : DbContext
+    public class MssqlVrimleContext : DbContext
     {
-        public VrimleContext(DbContextOptions options) : base(options)
+        public MssqlVrimleContext(DbContextOptions options) : base(options)
         {
         }
 
-        protected VrimleContext()
+        protected MssqlVrimleContext()
         {
         }
 
@@ -17,14 +17,12 @@ namespace Norso.API.Features
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSnakeCaseNamingConvention();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BusinessProfile>(entity =>
             {
-
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Name)
                     .IsRequired()
