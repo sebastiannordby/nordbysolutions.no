@@ -4,7 +4,7 @@ using Norso.API.Features.BusinessFeature;
 using Norso.API.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
-const string LocalFrontendCorsPolicy = "LocalFrontend";
+const string VrimleAppCorsPolicyName = "LocalFrontend";
 
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
@@ -16,10 +16,10 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(LocalFrontendCorsPolicy, policy =>
+    options.AddPolicy(VrimleAppCorsPolicyName, policy =>
     {
         policy
-            .WithOrigins("http://localhost:5173", "https://vrimle.app", "https://app.norso")
+            .WithOrigins("https://vrimle.app")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
@@ -31,14 +31,14 @@ builder.Services.AddInfrastructure();
 
 builder.Services.AddDbContext<VrimleContext>(options =>
 {
-    var connectionString = builder.Configuration["Secrets:DbConnectionString"];
+    var connectionString = builder.Configuration["Secrets:PostgresDbConnectionString"];
 
     if (string.IsNullOrWhiteSpace(connectionString))
     {
         throw new InvalidOperationException("Database connection string is not configured.");
     }
 
-    options.UseSqlServer(connectionString);
+    options.UseNpgsql(connectionString);
 });
 
 var app = builder.Build();
@@ -51,7 +51,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors(LocalFrontendCorsPolicy);
+app.UseCors(VrimleAppCorsPolicyName);
 
 app.UseAuthorization();
 

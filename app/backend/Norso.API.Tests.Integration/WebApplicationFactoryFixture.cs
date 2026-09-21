@@ -5,7 +5,7 @@ using Norso.API.Features;
 using Norso.API.Features.BusinessFeature.UseCases.BrregImport;
 using Norso.API.Features.BusinessFeature.UseCases.ImportCoordinates;
 using NSubstitute;
-using Testcontainers.MsSql;
+using Testcontainers.PostgreSql;
 
 namespace Norso.API.Tests.Integration
 {
@@ -14,7 +14,7 @@ namespace Norso.API.Tests.Integration
         private WebApplicationFactory<Program> _factory;
         public WebApplicationFactory<Program> Factory => _factory;
 
-        private readonly MsSqlContainer _testDatabaseContainer = new MsSqlBuilder().Build();
+        private readonly PostgreSqlContainer _testDatabaseContainer = new PostgreSqlBuilder("postgres:15.19-trixie").Build();
 
         public IBreegOrganizationalUnitProvider BreegOrganizationalUnitProviderMock = Substitute.For<IBreegOrganizationalUnitProvider>();
         public IAddressSearchClient AddressSearchClientMock = Substitute.For<IAddressSearchClient>();
@@ -31,7 +31,7 @@ namespace Norso.API.Tests.Integration
 
             var testDatabaseConnectionString = _testDatabaseContainer.GetConnectionString();
             var context = new VrimleContext(new DbContextOptionsBuilder<VrimleContext>()
-                .UseSqlServer(testDatabaseConnectionString)
+                .UseNpgsql(testDatabaseConnectionString)
                 .Options);
             await context.Database.EnsureCreatedAsync();
 
