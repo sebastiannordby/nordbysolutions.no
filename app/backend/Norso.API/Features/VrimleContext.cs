@@ -5,7 +5,7 @@ namespace Norso.API.Features
 {
     public class VrimleContext : DbContext
     {
-        public VrimleContext(DbContextOptions options) : base(options)
+        public VrimleContext(DbContextOptions<VrimleContext> options) : base(options)
         {
         }
 

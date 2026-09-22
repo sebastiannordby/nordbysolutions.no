@@ -30,9 +30,17 @@
     </PackageReference>
   </ItemGroup>
 
-	
   <ItemGroup>
     <Folder Include="Migrations\" />
   </ItemGroup>
 
+	<ItemGroup>
+		<Content Remove="temp\**" />
+		<None Remove="temp\**" />
+
+		<None Include="temp\**">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+			<CopyToPublishDirectory>Never</CopyToPublishDirectory>
+		</None>
+	</ItemGroup>
 </Project>

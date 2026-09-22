@@ -9,10 +9,12 @@ const string VrimleAppCorsPolicyName = "LocalFrontend";
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 
-// Add services to the container.
+builder.Configuration.AddKeyPerFile(
+    "/run/secrets",
+    optional: true,
+    reloadOnChange: false);
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddCors(options =>
 {

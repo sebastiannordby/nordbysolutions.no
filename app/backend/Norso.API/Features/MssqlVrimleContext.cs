@@ -5,7 +5,7 @@ namespace Norso.API.Features
 {
     public class MssqlVrimleContext : DbContext
     {
-        public MssqlVrimleContext(DbContextOptions options) : base(options)
+        public MssqlVrimleContext(DbContextOptions<MssqlVrimleContext> options) : base(options)
         {
         }
 

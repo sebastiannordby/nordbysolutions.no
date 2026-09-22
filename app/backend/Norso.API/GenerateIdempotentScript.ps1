@@ -1,2 +1,2 @@
-﻿dotnet ef migrations script --idempotent --output migrations.sql
+﻿dotnet ef migrations script --idempotent --context VrimleContext --output idempotent-migrations.sql
 pause
