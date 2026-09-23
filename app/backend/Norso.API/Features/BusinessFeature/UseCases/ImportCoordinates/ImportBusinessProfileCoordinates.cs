@@ -34,8 +34,6 @@ public class ImportBusinessProfileCoordinates(
                     await context.SaveChangesAsync(cancellationToken);
                     logger.LogInformation("Updated coordinates for business {OrganizationNumber}: ({Lat}, {Lon})", business.OrganizationNumber, point.Lat, point.Lon);
                 }
-
-                //await Task.Delay(50, cancellationToken); // Delay to avoid hitting rate limits
             }
             catch (Exception ex)
             {

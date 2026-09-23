@@ -1,54 +1,53 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Norso.API.Features.BusinessFeature.Models;
 
 namespace Norso.API.Features
 {
-    public class VrimleContext : DbContext
+    public class MssqlVrimleContext : DbContext
     {
-        public VrimleContext(DbContextOptions<VrimleContext> options) : base(options)
+        public MssqlVrimleContext(DbContextOptions<MssqlVrimleContext> options) : base(options)
         {
         }
 
-        protected VrimleContext()
+        protected MssqlVrimleContext()
         {
         }
 
-        public DbSet<BusinessProfile> BusinessProfiles { get; set; }
+        public DbSet<MssqlBusinessProfile> BusinessProfiles { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSnakeCaseNamingConvention();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<BusinessProfile>(entity =>
+            modelBuilder.Entity<MssqlBusinessProfile>(entity =>
             {
-
-                entity.HasKey(e => e.Id);
+                entity.ToTable("BusinessProfiles", "dbo");
+                entity.HasKey(e => e.Id)
+                    .HasName("PK_BusinessProfiles");
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(200);
+                    .HasColumnType("nvarchar(max)");
                 entity.Property(e => e.OrganizationNumber)
-                    .HasMaxLength(30);
+                    .HasColumnType("nvarchar(max)");
                 entity.Property(e => e.Description)
                     .HasMaxLength(1000);
                 entity.Property(e => e.PhoneNumber)
-                    .HasMaxLength(20);
+                    .HasColumnType("nvarchar(max)");
                 entity.Property(e => e.EmailAddress)
-                    .HasMaxLength(100);
+                    .HasColumnType("nvarchar(max)");
                 entity.Property(e => e.Country)
-                    .HasMaxLength(50);
+                    .HasColumnType("nvarchar(max)");
                 entity.Property(e => e.PostalPlace)
-                    .HasMaxLength(50);
+                    .HasColumnType("nvarchar(max)");
                 entity.Property(e => e.PostalCode)
-                    .HasMaxLength(10);
+                    .HasColumnType("nvarchar(max)");
                 entity.Property(e => e.AddressLine)
-                    .HasMaxLength(150);
+                    .HasColumnType("nvarchar(max)");
                 entity.Property(e => e.Latitude)
-                    .HasColumnType("double precision");
+                    .HasColumnType("float(53)");
                 entity.Property(e => e.Longitude)
-                    .HasColumnType("double precision");
+                    .HasColumnType("float(53)");
             });
         }
     }
