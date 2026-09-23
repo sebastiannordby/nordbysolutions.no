@@ -209,6 +209,30 @@ export function MapScreen({
         }}
       />
 
+      {selectedPlace && (
+        <aside className="map-selected-card" aria-label="Valgt sted">
+          <button
+            type="button"
+            className="map-selected-card__close"
+            onClick={() => onSelectPlace('')}
+            aria-label="Lukk stedskort"
+          >
+            X
+          </button>
+          <button type="button" className="map-selected-card__body" onClick={() => onOpenPlace(selectedPlace.id)}>
+            <span className="map-selected-card__pin" style={{ background: selectedPlace.pinColor }} />
+            <span className="map-selected-card__content">
+              <span className="map-selected-card__name">{selectedPlace.name}</span>
+              <span className="map-selected-card__meta">
+                {selectedPlace.categoryLabel} · {formatDistance(selectedPlace.distanceKm)} · {selectedPlace.municipality}
+              </span>
+              <span className="map-selected-card__note">{selectedPlace.shortNote}</span>
+            </span>
+            <span className="badge-open">{selectedPlace.openLabel}</span>
+          </button>
+        </aside>
+      )}
+
       <div className="map-header">
         <div className="map-search-wrap">
           <div ref={geocoderContainerRef} className="map-search-geocoder" />
