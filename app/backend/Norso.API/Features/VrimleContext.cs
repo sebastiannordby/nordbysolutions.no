@@ -46,9 +46,9 @@ namespace Norso.API.Features
                 entity.Property(e => e.AddressLine)
                     .HasMaxLength(150);
                 entity.Property(e => e.Latitude)
-                    .HasPrecision(8, 5);
+                    .HasColumnType("double precision");
                 entity.Property(e => e.Longitude)
-                    .HasPrecision(9, 5);
+                    .HasColumnType("double precision");
             });
         }
     }
